@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Tuhin Bepari, a full-stack engineer with over 10 years of experience in PHP, Symfony, React, and Vue.js. Discover his unique journey from academic studies to award-winning startup development and freelance expertise.">
+    <title>Tuhin Bepari - Full Stack Engineer & Freelancer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'dark-card': '#1e293b',
+                        'dark-border': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'accent-cyan': '#06b6d4',
+                        'accent-green': '#10b981',
+                        'accent-orange': '#f97316',
+                        'accent-purple': '#8b5cf6',
+                        'text-primary': '#f1f5f9',
+                        'text-secondary': '#cbd5e1',
+                        'text-tertiary': '#94a3b8',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Light mode styles */
+        body.light-mode {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .light-mode .bg-dark-bg {
+            background-color: #f1f5f9;
+        }
+
+        .light-mode .bg-dark-card {
+            background-color: #ffffff;
+        }
+
+        .light-mode .border-dark-border {
+            border-color: #cbd5e1;
+        }
+
+        .light-mode .text-text-primary {
+            color: #0f172a;
+        }
+
+        .light-mode .text-text-secondary {
+            color: #64748b;
+        }
+
+        .light-mode .text-text-tertiary {
+            color: #94a3b8;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .light-mode .section-title::after {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            border-radius: 2px;
+        }
+
+        .story-card {
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .light-mode .story-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .terminal-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .light-mode .terminal-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 25px;
+            width: 2px;
+            height: calc(100% + 5px);
+            background-color: #334155;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-card {
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-text-primary">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm border-b border-dark-border">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="index.html" class="text-2xl font-bold text-accent-blue">Tuhin Bepari</a>
+                <div class="flex items-center space-x-6">
+                    <ul class="flex space-x-6">
+                      <li>
+                        <a href="index.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Home</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">About</a></li>
+                                                <li><a href="lifestyle.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Lifestyle</a></li>
+
+                        <li><a href="education.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Education</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Projects</a></li>
+                        <li><a href="upwork.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Upwork</a></li>
+                        <li><a href="index.html#contact" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Contact</a></li>
+                    </ul>
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-card border border-dark-border text-text-secondary hover:text-accent-blue transition-colors">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12">
+        <div class="container mx-auto px-4">
+            <div class=" mx-auto">
+                <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden terminal-window">
+                    <div class="flex items-center px-4 py-3 bg-dark-border">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="ml-3 text-text-tertiary text-sm">tuhin@portfolio:~</div>
+                    </div>
+                    <div class="p-8 md:p-12">
+                        <div class="mb-6">
+                            <span class="text-accent-blue font-mono">$ </span>
+                            <span class="text-accent-cyan font-mono">cat about-me.txt</span>
+                        </div>
+
+                        <div class="mt-4">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+                                My Journey
+                            </h1>
+
+                            <p class="text-xl text-text-secondary max-w-3xl">
+                                From academic studies to award-winning startup development - here's my story
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-12 bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="mx-auto">
+                <div class="bg-dark-card border border-dark-border rounded-xl p-8 story-card">
+                    <h2 class="text-3xl font-bold section-title mb-8">The Beginning</h2>
+
+                    <div class="prose prose-invert max-w-none">
+                        <p class="text-text-secondary mb-6">
+                            While pursuing my Bachelor's Honours degree in Political Science at Dhaka College from 2009-2013, I discovered
+                            my passion for technology and software development. What started as curiosity about how websites worked quickly
+                            became a fascination with creating digital solutions that could solve real-world problems.
+                        </p>
+
+                        <p class="text-text-secondary mb-6">
+                            Balancing my academic studies with technology training, I took the IELTS exam in 2010 and scored 6.5 in the academic module,
+                            which strengthened my foundation in English - an essential skill for technical documentation and global collaboration.
+                            I then pursued computer basics training at NIIT and specialized web design and development courses, all while continuing
+                            my formal education.
+                        </p>
+
+                        <div class="bg-dark-bg border border-dark-border rounded-lg p-6 my-8 quote-card">
+                            <p class="text-text-primary italic">
+                                "The best way to learn is by doing. Every project, no matter how small, taught me something new."
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mt-10 mb-4">Education & Foundation</h3>
+
+                        <p class="text-text-secondary mb-6">
+                            I completed my Bachelor's Honours degree in Political Science from 2009-2013 at Dhaka College, followed by
+                            my Master's degree in the same subject at Dhaka College the following year. While pursuing my formal academic
+                            education, I simultaneously engaged in technology-related studies and skill development, laying a strong
+                            foundation for my future career in software development.
+                        </p>
+
+                        <p class="text-text-secondary mb-6">
+                            During my academic years, I balanced my political science studies with intensive technology training,
+                            including the IELTS exam, computer basics at NIIT, and specialized web design and development courses.
+                            This dual focus allowed me to develop both analytical thinking through my academic studies and technical
+                            expertise through focused technology training.
+                        </p>
+
+                        <h3 class="text-2xl font-bold mt-10 mb-4">Professional Growth</h3>
+
+                        <p class="text-text-secondary mb-6">
+                            Upon completing my Master's degree in 2014, I dove into the professional world with my first job at Phase 3 Solutions
+                            in 2013, where I worked until February 2016. This role provided me with invaluable real-world experience in building
+                            and maintaining web applications for clients across various industries. I learned the importance of writing
+                            maintainable, scalable code and developed strong problem-solving skills in a collaborative environment.
+                        </p>
+
+                        <p class="text-text-secondary mb-6">
+                            After leaving Phase 3 Solutions in February 2016, I transitioned to full-time freelancing on Upwork (formerly Odesk),
+                            where I have been working primarily ever since. This path allowed me to work with diverse clients globally and tackle
+                            a wide variety of technical challenges while maintaining the flexibility to continue my education and personal development.
+                        </p>
+
+                        <div class="flex flex-wrap mt-6 mb-8">
+                            <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">PHP</span>
+                            <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">JavaScript</span>
+                            <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">HTML/CSS</span>
+                            <span class="skill-tag bg-orange-500 bg-opacity-20 text-orange-400">MySQL</span>
+                            <span class="skill-tag bg-purple-500 bg-opacity-20 text-purple-400">Symfony</span>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mt-10 mb-4">Leadership & Mentorship</h3>
+
+                        <p class="text-text-secondary mb-6">
+                            From 2022 to 2024, I had the opportunity to work with a German company, MentalStark, where I served
+                            as a core developer from the beginning to the completion of their Symfony framework-based project.
+                            This project utilized API Platform and Domain-Driven Design (DDD) methodologies. My role involved not
+                            only technical development but also mentoring junior developers and contributing to architectural decisions.
+                        </p>
+
+                        <p class="text-text-secondary mb-6">
+                            The project was highly successful and received recognition as the "Most Promising Startup in Germany" in 2024.
+                            This experience reinforced my belief in the importance of strong technical leadership, clear communication,
+                            and understanding business requirements to deliver exceptional software solutions.
+                        </p>
+
+                        <h3 class="text-2xl font-bold mt-10 mb-4">Embracing New Technologies</h3>
+
+                        <p class="text-text-secondary mb-6">
+                            After my successful collaboration with MentalStark, I returned to full-time freelancing on Upwork,
+                            where I continue to work with clients globally. My experience with modern frameworks like Symfony,
+                            API Platform, and DDD methodologies has enhanced my ability to build robust, scalable applications.
+                        </p>
+
+                        <p class="text-text-secondary mb-6">
+                            I stay current with evolving technologies and methodologies, ensuring my solutions are cutting-edge
+                            and aligned with industry best practices. My focus remains on delivering high-quality, maintainable
+                            code while leveraging the latest tools and frameworks.
+                        </p>
+
+                        <div class="bg-dark-bg border border-dark-border rounded-lg p-6 my-8">
+                            <h4 class="text-xl font-bold mb-4 text-accent-blue">Current Expertise</h4>
+                            <ul class="space-y-2 text-text-secondary">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-green mt-1 mr-3"></i>
+                                    <span>Full-stack development with PHP frameworks (Symfony as primary, Laravel)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-green mt-1 mr-3"></i>
+                                    <span>Modern JavaScript frameworks (React, Vue.js)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-green mt-1 mr-3"></i>
+                                    <span>Domain-Driven Design and API Platform (extensive experience with MentalStark project)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-green mt-1 mr-3"></i>
+                                    <span>Freelance project management and client communication (8+ years on Upwork)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-accent-green mt-1 mr-3"></i>
+                                    <span>Team leadership and technical mentoring</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mt-10 mb-4">Looking Forward</h3>
+
+                        <p class="text-text-secondary mb-6">
+                            My unique journey – from academic studies in Political Science to becoming a core developer in an
+                            award-winning German startup – has taught me that diverse backgrounds can lead to innovative solutions.
+                            With over a decade of experience in software development and 8+ years of successful freelancing on Upwork,
+                            I bring both technical expertise and analytical thinking to every project.
+                        </p>
+
+                        <p class="text-text-secondary">
+                            As I continue my freelance career, I'm focused on taking on challenging projects that leverage my
+                            expertise in modern web technologies, particularly Symfony and API Platform. I'm also passionate about
+                            mentoring aspiring developers and contributing to projects that make a positive impact. My commitment
+                            to quality, attention to detail, and passion for technology continues to drive my professional growth.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-3 gap-6">
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-accent-blue mb-2">10+</div>
+                        <div class="text-text-secondary">Years Freelancing</div>
+                    </div>
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-accent-green mb-2">100+</div>
+                        <div class="text-text-secondary">Projects Completed</div>
+                    </div>
+                    <div class="bg-dark-card border border-dark-border rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-accent-purple mb-2">8+</div>
+                        <div class="text-text-secondary">Years Upwork</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-12 bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold section-title mb-12 text-center">My Core Values</h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-dark-bg border border-dark-border rounded-xl p-6">
+                        <div class="text-accent-blue text-2xl mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Quality First</h3>
+                        <p class="text-text-secondary">
+                            I believe in writing clean, maintainable code that stands the test of time. Every line of code
+                            is a reflection of my commitment to excellence.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-bg border border-dark-border rounded-xl p-6">
+                        <div class="text-accent-green text-2xl mb-4">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Continuous Learning</h3>
+                        <p class="text-text-secondary">
+                            Technology evolves rapidly, and I embrace this change. I'm always learning new tools,
+                            frameworks, and methodologies to improve my craft.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-bg border border-dark-border rounded-xl p-6">
+                        <div class="text-accent-purple text-2xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Collaboration</h3>
+                        <p class="text-text-secondary">
+                            Great software is built by great teams. I value open communication, knowledge sharing,
+                            and working together to solve complex problems.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-bg border border-dark-border rounded-xl p-6">
+                        <div class="text-accent-orange text-2xl mb-4">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                        <p class="text-text-secondary">
+                            I'm always looking for better ways to solve problems. Innovation isn't just about new
+                            technology - it's about finding creative solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-dark-border py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="text-3xl font-bold text-accent-blue mb-4">Tuhin Bepari</div>
+                <p class="text-text-secondary mb-6">Full Stack Engineer | AI Code Generation Specialist | Team Leader</p>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-orange hover:text-white hover:border-accent-orange transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-upwork"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="../index.html#contact" class="inline-flex items-center px-6 py-3 border-2 border-accent-green text-accent-green font-bold rounded-lg hover:bg-accent-green hover:text-white transition-all">
+                    Get In Touch <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="text-center text-text-tertiary text-sm pt-8 border-t border-dark-border mt-8">
+                <p>© 2023 Tuhin Bepari. All rights reserved. Crafted with precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Theme toggle functionality
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const themeIcon = themeToggle.querySelector('i');
+
+            // Check for saved theme preference or default to dark mode
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+
+                if (body.classList.contains('light-mode')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            initThemeToggle();
+        });
+    </script>
+</body>
+</html>

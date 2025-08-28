@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tuhin Bepari - Full Stack Engineer with 10+ years of experience following a balanced lifestyle approach to sustainable productivity and creativity since 2012.">
+    <title>Tuhin Bepari - Developer Lifestyle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'dark-card': '#1e293b',
+                        'dark-border': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'accent-cyan': '#06b6d4',
+                        'accent-green': '#10b981',
+                        'accent-orange': '#f97316',
+                        'accent-purple': '#8b5cf6',
+                        'accent-coffee': '#d97706',
+                        'text-primary': '#f1f5f9',
+                        'text-secondary': '#cbd5e1',
+                        'text-tertiary': '#94a3b8',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Light mode styles */
+        body.light-mode {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .light-mode .bg-dark-bg {
+            background-color: #f1f5f9;
+        }
+
+        .light-mode .bg-dark-card {
+            background-color: #ffffff;
+        }
+
+        .light-mode .border-dark-border {
+            border-color: #cbd5e1;
+        }
+
+        .light-mode .text-text-primary {
+            color: #0f172a;
+        }
+
+        .light-mode .text-text-secondary {
+            color: #64748b;
+        }
+
+        .light-mode .text-text-tertiary {
+            color: #94a3b8;
+        }
+
+        .light-mode .code-snippet {
+            color: rgba(59, 130, 246, 0.7);
+        }
+
+        .light-mode .syntax-element {
+            color: rgba(16, 185, 129, 0.8);
+        }
+
+        .light-mode .bracket-element {
+            color: rgba(249, 115, 22, 0.6);
+        }
+
+        .light-mode .curly-brace {
+            color: rgba(139, 92, 246, 0.7);
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .light-mode .section-title::after {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            border-radius: 2px;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .light-mode .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        .light-mode .btn-primary:hover {
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+        }
+
+        .terminal-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .light-mode .terminal-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .typing-cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1.2em;
+            background-color: #3b82f6;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Animated background elements */
+        .code-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            opacity: 0.25;
+        }
+
+        .code-snippet {
+            position: absolute;
+            color: rgba(59, 130, 246, 0.7);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            opacity: 0;
+            white-space: nowrap;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        .syntax-element {
+            position: absolute;
+            color: rgba(16, 185, 129, 0.8);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            opacity: 0;
+            animation: burst 8s infinite ease-out;
+        }
+
+        @keyframes burst {
+            0% {
+                transform: scale(0.1) translate(0, 0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: scale(3) translate(50px, -50px);
+                opacity: 0;
+            }
+        }
+
+        .bracket-element {
+            position: absolute;
+            color: rgba(249, 115, 22, 0.6);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+            opacity: 0;
+            animation: pulse 12s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .curly-brace {
+            position: absolute;
+            color: rgba(139, 92, 246, 0.7);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20px;
+            opacity: 0;
+            animation: rotate 20s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg) translateY(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: rotate(360deg) translateY(-100px);
+                opacity: 0;
+            }
+        }
+
+        /* Lifestyle section styles */
+        .lifestyle-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.5) 100%);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .light-mode .lifestyle-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(241, 245, 249, 0.7) 100%);
+            border: 1px solid rgba(203, 213, 225, 0.5);
+        }
+
+        .lifestyle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .light-mode .lifestyle-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .story-section {
+            position: relative;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.3) 0%, rgba(15, 23, 42, 0.3) 100%);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .light-mode .story-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(241, 245, 249, 0.5) 100%);
+            border: 1px solid rgba(203, 213, 225, 0.5);
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #3b82f6, #06b6d4);
+            border-radius: 2px;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .time-block {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .time-block:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+        }
+
+        .icon-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-text-primary">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm border-b border-dark-border">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-accent-blue">Tuhin Bepari</a>
+                <div class="flex items-center space-x-6">
+                    <ul class="flex space-x-8">
+                       <a href="index.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Home</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">About</a></li>
+                                                <li><a href="lifestyle.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Lifestyle</a></li>
+
+                        <li><a href="education.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Education</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Projects</a></li>
+                        <li><a href="upwork.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Upwork</a></li>
+                        <li><a href="index.html#contact" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Contact</a></li>
+                    </ul>
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-card border border-dark-border text-text-secondary hover:text-accent-blue transition-colors">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex items-center pt-16 pb-20 relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="code-background" id="codeBackground"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="mx-auto">
+                <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden terminal-window">
+                    <div class="flex items-center px-4 py-3 bg-dark-border">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="ml-3 text-text-tertiary text-sm">tuhin@lifestyle:~</div>
+                    </div>
+                    <div class="p-8 md:p-12">
+                        <div class="mb-4">
+                            <span class="text-accent-blue font-mono">$ </span>
+                            <span class="text-accent-cyan font-mono">cat developer-lifestyle.txt</span>
+                        </div>
+
+                        <div class="mt-8">
+                            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+                                The Balanced Developer<span class="typing-cursor"></span>
+                            </h1>
+
+                            <div class="text-2xl text-text-secondary mb-8 max-w-3xl h-16">How <span id="lifestyleTyping"></span></div>
+
+                            <p class="text-xl text-text-secondary mb-8">
+                                A journey through sustainable practices, wellness, and the art of maintaining passion for coding
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="#morning" class="px-8 py-4 bg-accent-blue text-white font-bold rounded-lg btn-primary">
+                                    Explore My Routine
+                                </a>
+                                <a href="#philosophy" class="px-8 py-4 border-2 border-accent-blue text-accent-blue font-bold rounded-lg hover:bg-accent-blue hover:text-white transition-all">
+                                    My Philosophy
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Morning Routine Section -->
+    <section id="morning" class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold section-title">The Sacred Morning Ritual</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto mt-4 text-lg">
+                    How I start each day to maximize creativity and focus
+                </p>
+            </div>
+
+            <div class="mx-auto">
+                <div class="story-section pl-8 mb-12">
+                    <h3 class="text-2xl font-bold mb-4">5 AM: The Magic Hour</h3>
+
+                    <div class="prose prose-invert max-w-none">
+                        <p class="text-text-secondary mb-6 text-lg">
+                            Since the beginning of my career in 2012, my day has begun at 5 AM with prayer - a moment of reflection and gratitude that sets the tone for everything that follows.
+                            This quiet time centers me and prepares my mind for the challenges ahead.
+                        </p>
+
+                        <p class="text-text-secondary mb-6 text-lg">
+                            After prayer, I have a light snack to energize my body without weighing it down. Then comes my 30-minute cycling session -
+                            a perfect way to wake up my muscles and get my blood flowing. The fresh air and movement clear my mind and prepare it for
+                            the deep thinking work that lies ahead.
+                        </p>
+
+                        <div class="flex justify-center my-8">
+                            <div class="text-5xl text-accent-green floating">
+                                <i class="fas fa-biking"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-text-secondary text-lg">
+                            By the time I return, I'm ready for breakfast and the most important part of my day - my peak thinking hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="time-block rounded-xl p-6 text-center">
+                        <div class="text-3xl text-accent-purple mb-4">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">5:00 AM</h3>
+                        <p class="text-text-secondary text-sm">
+                            Prayer and reflection to center the mind
+                        </p>
+                    </div>
+
+                    <div class="time-block rounded-xl p-6 text-center">
+                        <div class="text-3xl text-accent-green mb-4">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">5:30 AM</h3>
+                        <p class="text-text-secondary text-sm">
+                            Light snack to gently wake the body
+                        </p>
+                    </div>
+
+                    <div class="time-block rounded-xl p-6 text-center">
+                        <div class="text-3xl text-accent-blue mb-4">
+                            <i class="fas fa-biking"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">5:45 AM</h3>
+                        <p class="text-text-secondary text-sm">
+                            30-minute cycling session for physical activation
+                        </p>
+                    </div>
+
+                    <div class="time-block rounded-xl p-6 text-center">
+                        <div class="text-3xl text-accent-orange mb-4">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">6:30 AM</h3>
+                        <p class="text-text-secondary text-sm">
+                            Breakfast and freshly brewed coffee
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Approach Section -->
+    <section id="work" class="py-20 bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold section-title">The Productivity Formula</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto mt-4 text-lg">
+                    How I structure my workday for maximum creativity and efficiency
+                </p>
+            </div>
+
+            <div class="mx-auto">
+                <div class="story-section pl-8 mb-12">
+                    <h3 class="text-2xl font-bold mb-4">Morning: Peak Thinking Hours</h3>
+
+                    <div class="prose prose-invert max-w-none">
+                        <p class="text-text-secondary mb-6 text-lg">
+                            From 7 AM to 12 PM, I tackle the most challenging problems and complex coding tasks.
+                            This is when my mind is sharpest, most creative, and best equipped for critical thinking.
+                            I protect these hours fiercely - no meetings, no interruptions, just deep focus work.
+                        </p>
+
+                        <p class="text-text-secondary mb-6 text-lg">
+                            The combination of physical activity, proper nutrition, and mental preparation makes
+                            this my most productive time. Complex algorithms, system architecture decisions, and
+                            creative problem-solving all happen during this window.
+                        </p>
+
+                        <div class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-6">
+                            <p class="text-text-primary italic text-lg">
+                                "The code that writes itself in the morning is often born from the rhythm of the morning ritual."
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl font-bold mt-10 mb-4">Afternoon: Collaboration & Execution</h3>
+
+                        <p class="text-text-secondary text-lg">
+                            After lunch, I shift to meetings, client communication, and implementation work.
+                            This is when I'm still productive but better suited for collaborative tasks.
+                            The morning foundation ensures I approach afternoon work with clarity and energy.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-blue mb-4">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Morning Focus</h3>
+                        <ul class="space-y-3 text-text-secondary">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-blue mt-1 mr-2 text-sm"></i>
+                                <span>Complex problem-solving (7:00 - 12:00)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-blue mt-1 mr-2 text-sm"></i>
+                                <span>System architecture design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-blue mt-1 mr-2 text-sm"></i>
+                                <span>Creative coding and innovation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-blue mt-1 mr-2 text-sm"></i>
+                                <span>No meetings or interruptions</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-green mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Afternoon Collaboration</h3>
+                        <ul class="space-y-3 text-text-secondary">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-green mt-1 mr-2 text-sm"></i>
+                                <span>Client meetings and communication (13:00 - 17:00)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-green mt-1 mr-2 text-sm"></i>
+                                <span>Code implementation and testing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-green mt-1 mr-2 text-sm"></i>
+                                <span>Team collaboration and code reviews</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-accent-green mt-1 mr-2 text-sm"></i>
+                                <span>Documentation and planning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Culture Section -->
+    <section class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The Sacred Ritual of Coffee</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">
+                        More than just caffeine—coffee is the cornerstone of developer culture and mindful productivity
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-r from-accent-coffee to-accent-orange bg-opacity-10 border border-accent-coffee border-opacity-30 rounded-xl p-8 mb-12">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-6 text-accent-coffee">The Developer's Best Friend</h3>
+                            <p class="text-text-secondary mb-6">
+                                Coffee isn't just a beverage for developers—it's a ritual, a moment of pause,
+                                and a catalyst for creativity. The perfect cup accompanies breakthrough moments
+                                and provides comfort during debugging marathons.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-dark-card border border-dark-border rounded-lg p-4">
+                                    <div class="text-accent-coffee text-2xl mb-2">
+                                        <i class="fas fa-mug-hot"></i>
+                                    </div>
+                                    <h4 class="font-bold mb-1">Morning Ritual</h4>
+                                    <p class="text-text-tertiary text-sm">Start the day with intention</p>
+                                </div>
+                                <div class="bg-dark-card border border-dark-border rounded-lg p-4">
+                                    <div class="text-accent-coffee text-2xl mb-2">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </div>
+                                    <h4 class="font-bold mb-1">Break Companion</h4>
+                                    <p class="text-text-tertiary text-sm">Mindful pause from screens</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <div class="relative">
+                                <div class="text-8xl text-accent-coffee pulse">
+                                    <i class="fas fa-mug-hot"></i>
+                                </div>
+                                <div class="absolute -top-4 -right-4 bg-accent-orange text-white text-xs px-3 py-1 rounded-full font-bold">
+                                    #1 Developer Fuel
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-coffee mb-4">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Quality Over Quantity</h3>
+                        <p class="text-text-secondary">
+                            One great cup beats three mediocre ones. Invest in good beans and brewing methods.
+                        </p>
+                    </div>
+
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-coffee mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Timing Matters</h3>
+                        <p class="text-text-secondary">
+                            Morning coffee for energy, afternoon coffee for focus, evening tea for winding down.
+                        </p>
+                    </div>
+
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-coffee mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Social Connector</h3>
+                        <p class="text-text-secondary">
+                            Coffee breaks are opportunities for team bonding and informal problem-solving.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-20 bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold section-title">Nurturing the Whole Person</h2>
+                <p class="text-text-secondary max-w-2xl mx-auto mt-4 text-lg">
+                    How hobbies and interests outside of coding fuel creativity and prevent burnout
+                </p>
+            </div>
+
+            <div class="mx-auto">
+                <div class="story-section pl-8 mb-12">
+                    <h3 class="text-2xl font-bold mb-4">Gardening: Patience and Growth</h3>
+
+                    <div class="prose prose-invert max-w-none">
+                        <p class="text-text-secondary mb-6 text-lg">
+                            My rooftop garden is more than just a hobby—it's a metaphor for software development.
+                            Just as plants need the right conditions, patience, and care to flourish, so do the projects
+                            I work on. Gardening teaches me to think long-term, observe subtle changes, and appreciate
+                            the process as much as the results.
+                        </p>
+
+                        <p class="text-text-secondary mb-6 text-lg">
+                            Tending to my plants provides a mental break from screens while keeping my hands busy
+                            and my mind engaged. The satisfaction of watching something grow from a seed mirrors
+                            the joy I feel when a complex system comes together successfully.
+                        </p>
+
+                        <div class="flex justify-center my-8">
+                            <div class="text-5xl text-accent-green floating">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-text-secondary text-lg">
+                            This connection between nature and technology enriches both my personal life and my professional work.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-green mb-4">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Rooftop Gardening</h3>
+                        <p class="text-text-secondary mb-4">
+                            Tending to plants teaches patience, observation, and long-term thinking—skills that translate directly to software development.
+                        </p>
+                        <div class="flex items-center text-sm text-accent-green">
+                            <i class="fas fa-sun mr-2"></i>
+                            <span>Morning and evening care</span>
+                        </div>
+                    </div>
+
+                    <div class="lifestyle-card rounded-xl p-6">
+                        <div class="text-3xl text-accent-purple mb-4">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Continuous Learning</h3>
+                        <p class="text-text-secondary mb-4">
+                            Reading technical and non-technical books maintains curiosity and expands perspectives beyond coding.
+                        </p>
+                        <div class="flex items-center text-sm text-accent-purple">
+                            <i class="fas fa-book-open mr-2"></i>
+                            <span>30 minutes daily</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-dark-bg border border-dark-border rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-accent-blue">The Hobby Philosophy</h3>
+                    <p class="text-text-secondary mb-6">
+                        Hobbies aren't luxuries—they're necessities for a sustainable career. They provide:
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center p-4">
+                            <div class="text-3xl text-accent-green mb-3">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Mental Refreshment</h4>
+                            <p class="text-text-secondary text-sm">
+                                Activities that engage different parts of the brain
+                            </p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-3xl text-accent-blue mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Creative Inspiration</h4>
+                            <p class="text-text-secondary text-sm">
+                                New perspectives that spark innovative solutions
+                            </p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="text-3xl text-accent-purple mb-3">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">Emotional Balance</h4>
+                            <p class="text-text-secondary text-sm">
+                                Activities that bring joy and reduce stress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekend Philosophy Section -->
+    <section class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">The Sacred Weekend</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">
+                        Why disconnecting is the key to reconnecting with your passion
+                    </p>
+                </div>
+
+                <div class="story-section pl-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4">The Weekend Revelation</h3>
+                    <p class="text-text-secondary mb-6">
+                        It took me three years of weekend coding to realize I was sabotaging my own success.
+                        The projects I was most proud of, the solutions I was most creative with, all came
+                        after I had taken real time to disconnect and recharge.
+                    </p>
+                    <div class="bg-gradient-to-r from-accent-coffee to-accent-orange bg-opacity-20 border border-accent-coffee border-opacity-30 rounded-lg p-6 my-6">
+                        <p class="text-text-primary italic">
+                            "The code that writes itself on Monday morning is often born from the rest
+                            and experiences of the weekend."
+                        </p>
+                    </div>
+                    <p class="text-text-secondary">
+                        Now, weekends are non-negotiable recovery time. This isn't about laziness—it's
+                        about maintaining the creative energy that makes great development possible.
+                    </p>
+                </div>
+
+                <div class="bg-dark-card border border-dark-border rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-accent-coffee">The Sacred Weekend Rule</h3>
+                    <p class="text-text-secondary mb-6">
+                        Weekends are sacred time for recovery, relationships, and personal interests.
+                        No coding unless there's a genuine emergency that cannot wait until Monday.
+                    </p>
+                    <p class="text-text-secondary mb-8">
+                        This rule prevents burnout, maintains creativity, and ensures you return to work
+                        on Monday refreshed and motivated.
+                    </p>
+
+                    <h4 class="text-xl font-bold mb-4">Weekend Activities</h4>
+                    <div class="grid md:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
+                            <i class="fas fa-seedling text-accent-green mr-3"></i>
+                            <span>Gardening and plant care</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
+                            <i class="fas fa-utensils text-accent-orange mr-3"></i>
+                            <span>Cooking and culinary exploration</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
+                            <i class="fas fa-book-reader text-accent-purple mr-3"></i>
+                            <span>Reading non-technical books</span>
+                        </div>
+                        <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
+                            <i class="fas fa-music text-accent-cyan mr-3"></i>
+                            <span>Music and creative pursuits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="py-20 bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">The Sustainable Developer</h2>
+                    <p class="text-text-secondary max-w-2xl mx-auto">
+                        Building a career that thrives, not just survives
+                    </p>
+                </div>
+
+                <div class="story-section pl-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4">Beyond the Next Framework</h3>
+                    <p class="text-text-secondary mb-6">
+                        Since 2012, I've watched countless developers chase the latest frameworks and tools, hoping to stay relevant.
+                        While staying current is important, the real key to career longevity is building
+                        timeless skills and adaptability through a balanced lifestyle.
+                    </p>
+                    <div class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-6">
+                        <p class="text-text-primary italic">
+                            "The frameworks will change, but the ability to learn new frameworks quickly
+                            will keep you employed forever."
+                        </p>
+                    </div>
+                    <p class="text-text-secondary">
+                        Focus on fundamentals: computer science principles, system design, problem-solving,
+                        communication, and leadership. These skills transcend specific technologies and
+                        form the foundation of a sustainable career.
+                    </p>
+                </div>
+
+                <div class="bg-dark-bg border border-dark-border rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-accent-green">The Sustainability Formula</h3>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="icon-bg w-12 h-12 rounded-full flex items-center justify-center mr-6 mt-1">
+                                <i class="fas fa-seedling text-accent-green text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Plant: Build Strong Foundations (2012-Present)</h4>
+                                <p class="text-text-secondary">
+                                    Since the beginning of my career, I've invested in computer science fundamentals, software engineering principles,
+                                    and core programming concepts that remain relevant regardless of technological shifts.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="icon-bg w-12 h-12 rounded-full flex items-center justify-center mr-6 mt-1">
+                                <i class="fas fa-water text-accent-blue text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Water: Maintain Balance</h4>
+                                <p class="text-text-secondary">
+                                    For over a decade, I've protected my physical and mental health through consistent routines,
+                                    hobbies, and boundaries that prevent burnout and maintain long-term productivity.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="icon-bg w-12 h-12 rounded-full flex items-center justify-center mr-6 mt-1">
+                                <i class="fas fa-sun text-accent-orange text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Harvest: Apply and Share Knowledge</h4>
+                                <p class="text-text-secondary">
+                                    Put learning into practice through projects, contributions, and teaching.
+                                    Sharing knowledge reinforces learning and builds your professional reputation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="icon-bg w-12 h-12 rounded-full flex items-center justify-center mr-6 mt-1">
+                                <i class="fas fa-recycle text-accent-purple text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-3">Renew: Adapt and Evolve</h4>
+                                <p class="text-text-secondary">
+                                    Stay flexible and willing to pivot as technologies evolve. Embrace change
+                                    as an opportunity for growth rather than a threat to security.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="py-20 bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="story-section pl-8">
+                    <h2 class="text-3xl font-bold mb-6">The Lifelong Learner's Creed</h2>
+
+                    <div class="prose prose-invert max-w-none">
+                        <p class="text-text-secondary mb-6 text-lg">
+                            Looking back on my 10+ year journey since 2012, I realize that the most successful developers I know
+                            aren't necessarily the ones who knew the most frameworks at any given time.
+                            They were the ones who never stopped learning, never became complacent, and
+                            never lost curiosity about what might be possible.
+                        </p>
+
+                        <p class="text-text-secondary mb-6 text-lg">
+                            But more importantly, they were the ones who understood that sustainable success
+                            comes not just from technical skills, but from a lifestyle that supports continuous
+                            growth, creativity, and well-being. I've been practicing this approach since the beginning
+                            of my career, and it has been the foundation of my long-term success.
+                        </p>
+
+                        <div class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-8">
+                            <p class="text-text-primary italic text-lg">
+                                "In our field, the only constant is change. The developers who thrive are
+                                those who embrace that change as fuel for growth while maintaining the balance
+                                that keeps their passion alive."
+                            </p>
+                        </div>
+
+                        <p class="text-text-secondary text-lg">
+                            Your career in development isn't a destination—it's a journey of continuous discovery.
+                            Build a lifestyle that sustains your passion, protects your well-being, and makes every day
+                            of coding a choice you're excited to make. When you do, you'll find that the technologies may change,
+                            but your ability to adapt and grow will remain your greatest competitive advantage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-dark-border py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="text-3xl font-bold text-accent-blue mb-4">Tuhin Bepari</div>
+                <p class="text-text-secondary mb-6">Full Stack Engineer | AI Code Generation Specialist | Team Leader | 10+ Years Experience</p>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                        <i class="fab fa-medium-m"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-orange hover:text-white hover:border-accent-orange transition-all">
+                        <i class="fab fa-upwork"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center text-text-tertiary text-sm pt-8 border-t border-dark-border">
+                <p>© 2023 Tuhin Bepari. All rights reserved. Practicing sustainable development since 2012.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Typing effect for hero subtitle
+        function typeLifestyle() {
+            const lifestyleTexts = [
+                "a morning ritual fuels my creativity",
+                "balanced living supports sustainable work",
+                "hobbies nurture the whole developer",
+                "discipline creates freedom",
+                "10+ years of sustainable practice",
+                "consistency builds mastery"
+            ];
+            const element = document.getElementById('lifestyleTyping');
+            let textIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 50;
+
+            function type() {
+                const currentText = lifestyleTexts[textIndex];
+
+                if (!isDeleting && charIndex < currentText.length) {
+                    // Typing
+                    element.innerHTML = currentText.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 50;
+                } else if (!isDeleting && charIndex === currentText.length) {
+                    // Pause at end of text
+                    isDeleting = true;
+                    typingSpeed = 2000;
+                } else if (isDeleting && charIndex > 0) {
+                    // Deleting
+                    element.innerHTML = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 30;
+                } else if (isDeleting && charIndex === 0) {
+                    // Move to next text
+                    isDeleting = false;
+                    textIndex = (textIndex + 1) % lifestyleTexts.length;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(type, typingSpeed);
+            }
+
+            // Start typing after a delay
+            setTimeout(type, 1000);
+        }
+
+        // Create animated background elements with coding syntax
+        function createBackgroundElements() {
+            const background = document.getElementById('codeBackground');
+
+            // Code snippets without specific framework names
+            const codeSnippets = [
+                'function init() {',
+                'const data = fetchData();',
+                'if (condition) {',
+                'return response.json();',
+                'for (let i = 0; i < arr.length; i++) {',
+                'class Component extends Base {',
+                'async function process() {',
+                'try { await operation(); }',
+                'const result = map(data);',
+                'export default module;',
+                'import { util } from "lib";',
+                'let config = new Config();',
+                'this.setState({ ready: true });',
+                'element.addEventListener("click", handler);',
+                'response.headers.set("Content-Type", "application/json");',
+                'const promise = new Promise((resolve) => {',
+                'array.filter(item => item.active);',
+                'document.querySelector(".target");',
+                'Math.random() * range;',
+                'JSON.parse(payload);'
+            ];
+
+            // Syntax elements
+            const syntaxElements = [
+                '{', '}', '(', ')', '[', ']', ';', ':', '=', '=>', '->', '::',
+                '&&', '||', '==', '!=', '<', '>', '<=', '>=', '+', '-', '*', '/',
+                '...', '?', '!', '@', '#', '$', '%', '^', '&', '*', '|'
+            ];
+
+            // Bracket elements
+            const bracketElements = ['{', '}', '(', ')', '[', ']'];
+
+            // Create floating code snippets
+            for (let i = 0; i < 40; i++) {
+                const element = document.createElement('div');
+                element.className = 'code-snippet';
+                element.textContent = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.animationDelay = Math.random() * 15 + 's';
+                element.style.animationDuration = (10 + Math.random() * 20) + 's';
+                background.appendChild(element);
+            }
+
+            // Create syntax elements
+            for (let i = 0; i < 30; i++) {
+                const element = document.createElement('div');
+                element.className = 'syntax-element';
+                element.textContent = syntaxElements[Math.floor(Math.random() * syntaxElements.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.top = Math.random() * 100 + 'vh';
+                element.style.animationDelay = Math.random() * 10 + 's';
+                element.style.animationDuration = (5 + Math.random() * 10) + 's';
+                background.appendChild(element);
+            }
+
+            // Create bracket elements
+            for (let i = 0; i < 25; i++) {
+                const element = document.createElement('div');
+                element.className = 'bracket-element';
+                element.textContent = bracketElements[Math.floor(Math.random() * bracketElements.length)];
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.top = Math.random() * 100 + 'vh';
+                element.style.animationDelay = Math.random() * 12 + 's';
+                element.style.animationDuration = (8 + Math.random() * 15) + 's';
+                background.appendChild(element);
+            }
+
+            // Create curly braces
+            for (let i = 0; i < 20; i++) {
+                const element = document.createElement('div');
+                element.className = 'curly-brace';
+                element.textContent = Math.random() > 0.5 ? '{' : '}';
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.top = Math.random() * 100 + 'vh';
+                element.style.animationDelay = Math.random() * 20 + 's';
+                element.style.animationDuration = (15 + Math.random() * 20) + 's';
+                background.appendChild(element);
+            }
+        }
+
+        // Theme toggle functionality
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const themeIcon = themeToggle.querySelector('i');
+
+            // Check for saved theme preference or default to dark mode
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+
+                if (body.classList.contains('light-mode')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            createBackgroundElements();
+            typeLifestyle();
+            initThemeToggle();
+        });
+    </script>
+</body>
+</html>

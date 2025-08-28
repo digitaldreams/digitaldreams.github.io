@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upwork profile of Tuhin Bepari, a Senior Web Developer with 10+ years experience in Laravel, Symfony, and React. Over $100K earned with 56 completed jobs.">
+    <title>Tuhin Bepari - Upwork Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'dark-card': '#1e293b',
+                        'dark-border': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'accent-cyan': '#06b6d4',
+                        'accent-green': '#10b981', // Upwork's brand color for emphasis
+                        'accent-orange': '#f97316',
+                        'accent-purple': '#8b5cf6',
+                        'text-primary': '#f1f5f9',
+                        'text-secondary': '#cbd5e1',
+                        'text-tertiary': '#94a3b8',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Light mode styles */
+        body.light-mode {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .light-mode .bg-dark-bg {
+            background-color: #f1f5f9;
+        }
+
+        .light-mode .bg-dark-card {
+            background-color: #ffffff;
+        }
+
+        .light-mode .border-dark-border {
+            border-color: #cbd5e1;
+        }
+
+        .light-mode .text-text-primary {
+            color: #0f172a;
+        }
+
+        .light-mode .text-text-secondary {
+            color: #64748b;
+        }
+
+        .light-mode .text-text-tertiary {
+            color: #94a3b8;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .light-mode .section-title::after {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            border-radius: 2px;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .light-mode .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+
+        .light-mode .btn-primary:hover {
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+        }
+
+        .terminal-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .light-mode .terminal-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stats-card {
+            transition: all 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .stats-card:hover {
+            transform: translateY(-5px);
+            border-color: #10b981;
+        }
+
+        .btn-upwork {
+            background-color: #10b981;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-upwork:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+        }
+
+        .light-mode .btn-upwork:hover {
+            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+        }
+
+        .job-card {
+            transition: all 0.3s ease;
+        }
+
+        .job-card:hover {
+            transform: translateY(-3px);
+            border-color: #3b82f6;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-card {
+            border-left: 4px solid #3b82f6;
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.3) 0%, rgba(15, 23, 42, 0.3) 100%);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-text-primary">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm border-b border-dark-border">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <a href="../index.html" class="text-2xl font-bold text-accent-blue">Tuhin Bepari</a>
+                <div class="flex items-center space-x-6">
+                    <ul class="flex space-x-6">
+                       <a href="index.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Home</a></li>
+                        <li><a href="about.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">About</a></li>
+                                                <li><a href="lifestyle.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Lifestyle</a></li>
+
+                        <li><a href="education.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Education</a></li>
+                        <li><a href="projects.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Projects</a></li>
+                        <li><a href="upwork.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Upwork</a></li>
+                        <li><a href="index.html#contact" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Contact</a></li>
+                    </ul>
+                    <!-- Dark/Light Mode Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-card border border-dark-border text-text-secondary hover:text-accent-blue transition-colors">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-28 pb-16 bg-dark-card">
+            <div class="container mx-auto px-4 text-center">
+                <div class="inline-block bg-green-500/10 text-accent-green px-4 py-2 rounded-full font-bold mb-4">
+                    <i class="fas fa-check-circle"></i> TOP RATED PLUS on Upwork
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">Senior Web Developer</h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-10">
+                    Laravel, Symfony, React Expert with 10+ Years Experience
+                </p>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="bg-dark-bg p-6 rounded-xl stats-card">
+                        <div class="text-5xl font-bold text-white mb-2">$100K+</div>
+                        <div class="text-text-secondary">Total Earnings</div>
+                    </div>
+                    <div class="bg-dark-bg p-6 rounded-xl stats-card">
+                        <div class="text-5xl font-bold text-white mb-2">56</div>
+                        <div class="text-text-secondary">Completed Jobs</div>
+                    </div>
+                    <div class="bg-dark-bg p-6 rounded-xl stats-card">
+                        <div class="text-5xl font-bold text-white mb-2">6,266</div>
+                        <div class="text-text-secondary">Total Hours</div>
+                    </div>
+                    <div class="bg-dark-bg p-6 rounded-xl stats-card">
+                        <div class="text-5xl font-bold text-white mb-2">$30/hr</div>
+                        <div class="text-text-secondary">Hourly Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold section-title">Technical Expertise</h2>
+                        <p class="text-lg text-text-secondary mt-4">10+ years experience with PHP frameworks and modern web technologies</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-dark-card p-6 rounded-lg card-hover">
+                            <div class="text-accent-blue text-3xl mb-4"><i class="fab fa-laravel"></i></div>
+                            <h3 class="text-xl font-bold">Laravel Development</h3>
+                            <p class="text-text-secondary">10+ years experience with Laravel from version 4.2 to 12. Expert in all Laravel features and best practices.</p>
+                            <div class="flex flex-wrap mt-4">
+                                <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">Laravel</span>
+                                <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">APIs</span>
+                                <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">Eloquent</span>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-6 rounded-lg card-hover">
+                            <div class="text-accent-blue text-3xl mb-4"><i class="fab fa-symfony"></i></div>
+                            <h3 class="text-xl font-bold">Symfony & DDD</h3>
+                            <p class="text-text-secondary">3+ years experience with Symfony and Domain-Driven Design separating business logic from framework code.</p>
+                            <div class="flex flex-wrap mt-4">
+                                <span class="skill-tag bg-black bg-opacity-20 text-gray-400">Symfony</span>
+                                <span class="skill-tag bg-black bg-opacity-20 text-gray-400">DDD</span>
+                                <span class="skill-tag bg-black bg-opacity-20 text-gray-400">Architecture</span>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-6 rounded-lg card-hover">
+                            <div class="text-accent-blue text-3xl mb-4"><i class="fab fa-react"></i></div>
+                            <h3 class="text-xl font-bold">Frontend Development</h3>
+                            <p class="text-text-secondary">Building modern UIs with React, Vue.js, and state management for interactive web applications.</p>
+                            <div class="flex flex-wrap mt-4">
+                                <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">React</span>
+                                <span class="skill-tag bg-purple-500 bg-opacity-20 text-purple-400">Vue.js</span>
+                                <span class="skill-tag bg-cyan-500 bg-opacity-20 text-cyan-400">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="bg-dark-card p-6 rounded-lg card-hover">
+                            <div class="text-accent-blue text-3xl mb-4"><i class="fas fa-database"></i></div>
+                            <h3 class="text-xl font-bold">Database & Testing</h3>
+                            <p class="text-text-secondary">Expert in MySQL, MongoDB, and comprehensive testing with PHPUnit for 100% code coverage.</p>
+                            <div class="flex flex-wrap mt-4">
+                                <span class="skill-tag bg-orange-500 bg-opacity-20 text-orange-400">MySQL</span>
+                                <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">MongoDB</span>
+                                <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">PHPUnit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Testimonials Section -->
+        <section class="py-20 bg-dark-card">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Client Testimonials</h2>
+                    <p class="text-lg text-text-secondary mt-4">What clients say about working with me on Upwork</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="bg-dark-bg p-8 rounded-xl job-card">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-text-secondary italic mb-6">
+                            "I worked with Tuhin many times. He's a good developer and always deliver upon my expectations. I'll keep working with him in a near feature. If you want a skilled…"
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">JD</div>
+                            <div>
+                                <h4 class="font-bold">John Davis</h4>
+                                <p class="text-text-tertiary text-sm">Laravel + Vue.js Platform Project</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-text-tertiary text-sm">
+                            <i class="fas fa-dollar-sign mr-1"></i> $5,954.17 | 238 hours
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-bg p-8 rounded-xl job-card">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-text-secondary italic mb-6">
+                            "Tuhin is one of the best freelancer I ever met on Upwork. Looking forward to work with him again on a future project."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">SM</div>
+                            <div>
+                                <h4 class="font-bold">Sarah Miller</h4>
+                                <p class="text-text-tertiary text-sm">Platform Improvements Project</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-text-tertiary text-sm">
+                            <i class="fas fa-dollar-sign mr-1"></i> $504.00 | 28 hours
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-bg p-8 rounded-xl job-card">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-text-secondary italic mb-6">
+                            "Tuhin is just the best."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">RK</div>
+                            <div>
+                                <h4 class="font-bold">Robert King</h4>
+                                <p class="text-text-tertiary text-sm">Backend Functionalities Project</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-text-tertiary text-sm">
+                            <i class="fas fa-dollar-sign mr-1"></i> $39.00 | 2 hours
+                        </div>
+                    </div>
+
+                    <div class="bg-dark-bg p-8 rounded-xl job-card">
+                        <div class="flex text-yellow-400 mb-4">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-text-secondary italic mb-6">
+                            "Great to work with"
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">AJ</div>
+                            <div>
+                                <h4 class="font-bold">Alex Johnson</h4>
+                                <p class="text-text-tertiary text-sm">Laravel CRUD Interface Project</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-text-tertiary text-sm">
+                            <i class="fas fa-dollar-sign mr-1"></i> $157.50 | 10 hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Loyalty Section -->
+        <section class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Building Lasting Partnerships</h2>
+                    <p class="text-lg text-text-secondary mt-4">My success is built on trust, quality, and fostering long-term client relationships.</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 text-center">
+                    <div class="bg-dark-card p-8 rounded-xl card-hover">
+                        <div class="text-5xl text-accent-cyan mb-4"><i class="fas fa-redo-alt"></i></div>
+                        <h3 class="text-2xl font-bold mb-2">High Rate of Repeat Clients</h3>
+                        <p class="text-text-secondary">A significant portion of my work comes from repeat clients who trust me as their go-to developer for ongoing needs and new projects.</p>
+                    </div>
+                    <div class="bg-dark-card p-8 rounded-xl card-hover">
+                        <div class="text-5xl text-accent-purple mb-4"><i class="fas fa-calendar-alt"></i></div>
+                        <h3 class="text-2xl font-bold mb-2">Long-Term Engagements</h3>
+                        <p class="text-text-secondary">I specialize in forming long-term partnerships, becoming an integral part of my clients' teams to support their growth and evolving technical requirements over years.</p>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="mt-16">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center section-title mb-12">Key Skills & Technologies</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">PHP</span>
+                        <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">Laravel</span>
+                        <span class="skill-tag bg-black bg-opacity-20 text-gray-400">Symfony</span>
+                        <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">JavaScript</span>
+                        <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">React</span>
+                        <span class="skill-tag bg-purple-500 bg-opacity-20 text-purple-400">Vue.js</span>
+                        <span class="skill-tag bg-orange-500 bg-opacity-20 text-orange-400">MySQL</span>
+                        <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">MongoDB</span>
+                        <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">GraphQL</span>
+                        <span class="skill-tag bg-cyan-500 bg-opacity-20 text-cyan-400">Domain-Driven Design</span>
+                        <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">API Development</span>
+                        <span class="skill-tag bg-purple-500 bg-opacity-20 text-purple-400">Agile/Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="py-20 bg-dark-card">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="quote-card border border-dark-border rounded-xl p-8">
+                        <div class="text-4xl text-accent-blue mb-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="text-xl text-text-primary italic mb-6">
+                            "Experience is not what happens to you, but what you do with what happens to you."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">TB</div>
+                            <div>
+                                <h4 class="text-lg font-bold">Tuhin Bepari</h4>
+                                <p class="text-text-secondary">Senior Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <i class="fab fa-upwork text-6xl text-accent-green mb-6"></i>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Ready to Start Your Project?</h2>
+                    <p class="text-text-secondary text-lg mb-8">
+                        With over $100K earned and 56 completed jobs on Upwork, I bring proven expertise and reliability to every project. Let's discuss how I can bring the same level of dedication to your project.
+                    </p>
+                    <a href="https://www.upwork.com/freelancers/~01c781f2a1b3a8a3e7" target="_blank" class="inline-block px-10 py-4 font-bold rounded-lg btn-upwork btn-primary">
+                        <i class="fab fa-upwork mr-2"></i>Invite Me on Upwork
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-dark-border py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="text-3xl font-bold text-accent-blue mb-4">Tuhin Bepari</div>
+                <p class="text-text-secondary mb-6">Senior Web Developer | Laravel & Symfony Expert | React Developer</p>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://github.com/tuhinbepari" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~01c781f2a1b3a8a3e7" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-green hover:text-white hover:border-accent-green transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-upwork"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tuhin-bepari" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="../index.html#contact" class="inline-flex items-center px-6 py-3 border-2 border-accent-green text-accent-green font-bold rounded-lg hover:bg-accent-green hover:text-white transition-all btn-primary">
+                    Get In Touch <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="text-center text-text-tertiary text-sm pt-8 border-t border-dark-border mt-8">
+                <p>© 2024 Tuhin Bepari. All rights reserved. Crafted with precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const themeIcon = themeToggle.querySelector('i');
+
+            // Check for saved theme preference or default to dark mode
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+
+            themeToggle.addEventListener('click', function() {
+                body.classList.toggle('light-mode');
+
+                if (body.classList.contains('light-mode')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
