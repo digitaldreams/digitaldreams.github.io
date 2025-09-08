@@ -1,0 +1,212 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "icon": "fab fa-laravel",
+      "name": "Laravel",
+      "tooltipTitle": "Laravel",
+      "tooltipDescription": "8 years experience building scalable web applications with Laravel framework"
+    },
+    {
+      "id": 2,
+      "icon": "fab fa-php",
+      "name": "PHP",
+      "tooltipTitle": "PHP",
+      "tooltipDescription": "Expert in core PHP and modern development practices"
+    },
+    {
+      "id": 3,
+      "icon": "fab fa-react",
+      "name": "React",
+      "tooltipTitle": "React",
+      "tooltipDescription": "Building modern UIs with React and state management"
+    },
+    {
+      "id": 4,
+      "icon": "fab fa-js",
+      "name": "JavaScript",
+      "tooltipTitle": "JavaScript",
+      "tooltipDescription": "Full-stack JavaScript development with ES6+ features"
+    },
+    {
+      "id": 5,
+      "icon": "fab fa-css3-alt",
+      "name": "CSS3",
+      "tooltipTitle": "CSS3",
+      "tooltipDescription": "Modern styling with CSS3, Flexbox, Grid and animations"
+    },
+    {
+      "id": 6,
+      "icon": "fab fa-html5",
+      "name": "HTML5",
+      "tooltipTitle": "HTML5",
+      "tooltipDescription": "Semantic HTML5 markup for accessible web applications"
+    },
+    {
+      "id": 7,
+      "icon": "fab fa-symfony",
+      "name": "Symfony",
+      "tooltipTitle": "Symfony",
+      "tooltipDescription": "3 years experience building enterprise applications"
+    },
+    {
+      "id": 8,
+      "icon": "fab fa-node-js",
+      "name": "Node.js",
+      "tooltipTitle": "Node.js",
+      "tooltipDescription": "Building backend services and APIs with Node.js"
+    },
+    {
+      "id": 9,
+      "icon": "fab fa-docker",
+      "name": "Docker",
+      "tooltipTitle": "Docker",
+      "tooltipDescription": "Containerizing applications for deployment"
+    },
+    {
+      "id": 10,
+      "icon": "fas fa-database",
+      "name": "Databases",
+      "tooltipTitle": "Databases",
+      "tooltipDescription": "MySQL, PostgreSQL, MongoDB with optimization"
+    },
+    {
+      "id": 11,
+      "icon": "fab fa-aws",
+      "name": "AWS",
+      "tooltipTitle": "AWS",
+      "tooltipDescription": "Deploying and managing applications on AWS"
+    },
+    {
+      "id": 12,
+      "icon": "fas fa-robot",
+      "name": "AI Tools",
+      "tooltipTitle": "AI Tools",
+      "tooltipDescription": "Utilizing AI tools for enhanced development"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "date": "June 15, 2023",
+      "title": "Building RESTful APIs with Laravel: Best Practices",
+      "excerpt": "Learn how to design and implement robust RESTful APIs using Laravel with authentication, validation, and testing.",
+      "tags": [
+        { "text": "Laravel" },
+        { "text": "API" },
+        { "text": "PHP" }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "May 28, 2023",
+      "title": "React Performance Optimization Techniques You Should Know",
+      "excerpt": "Discover advanced techniques to optimize React application performance including memoization, lazy loading, and bundle splitting.",
+      "tags": [
+        { "text": "React" },
+        { "text": "Performance" },
+        { "text": "JavaScript" }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "April 12, 2023",
+      "title": "Building Microservices Architecture with Symfony",
+      "excerpt": "A comprehensive guide to implementing microservices using Symfony components and modern deployment strategies.",
+      "tags": [
+        { "text": "Symfony" },
+        { "text": "Microservices" },
+        { "text": "Architecture" }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "laravel-api-boilerplate",
+      "description": "A production-ready Laravel boilerplate with JWT authentication, API resources, and testing setup.",
+      "stars": "1.2k",
+      "forks": "89",
+      "issues": "12",
+      "tags": [
+        { "text": "Laravel" },
+        { "text": "PHP" },
+        { "text": "API" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "react-component-library",
+      "description": "A collection of reusable React components with TypeScript support and comprehensive documentation.",
+      "stars": "856",
+      "forks": "156",
+      "issues": "8",
+      "tags": [
+        { "text": "React" },
+        { "text": "TypeScript" },
+        { "text": "UI" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "symfony-docker-setup",
+      "description": "Docker configuration for Symfony applications with Nginx, PHP-FPM, MySQL, and Redis.",
+      "stars": "432",
+      "forks": "67",
+      "issues": "5",
+      "tags": [
+        { "text": "Symfony" },
+        { "text": "Docker" },
+        { "text": "DevOps" }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "initials": "JD",
+      "name": "John Davis",
+      "title": "CEO, TechStart Inc.",
+      "date": "June 15, 2023",
+      "rating": "5",
+      "content": "Tuhin delivered our Laravel-based e-commerce platform ahead of schedule and exceeded our expectations. His technical expertise and communication skills are exceptional. Will definitely hire again for future projects."
+    },
+    {
+      "id": 2,
+      "initials": "SR",
+      "name": "Sarah Roberts",
+      "title": "Product Manager, InnovateCorp",
+      "date": "May 22, 2023",
+      "rating": "5",
+      "content": "Working with Tuhin on our React dashboard project was a game-changer. He understood our complex requirements and delivered a pixel-perfect solution. His problem-solving approach and attention to detail are impressive."
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "University of Technology",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "startDate": "2010",
+      "endDate": "2014",
+      "description": "Focused on software engineering and web development technologies",
+      "grade": "3.8 GPA"
+    },
+    {
+      "id": 2,
+      "institution": "Tech Institute",
+      "degree": "Master of Science",
+      "field": "Software Engineering",
+      "startDate": "2014",
+      "endDate": "2016",
+      "description": "Specialized in distributed systems and cloud computing",
+      "grade": "3.9 GPA"
+    }
+  ],
+  "stats": [
+    { "id": 1, "value": "4.9", "label": "Average Rating" },
+    { "id": 2, "value": "1000+", "label": "Hours Worked" },
+    { "id": 3, "value": "98%", "label": "Job Success" },
+    { "id": 4, "value": "50+", "label": "Projects" }
+  ]
+}

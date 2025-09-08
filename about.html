@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -33,166 +34,9 @@
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f1f5f9;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Light mode styles */
-        body.light-mode {
-            background-color: #f8fafc;
-            color: #0f172a;
-        }
-
-        .light-mode .bg-dark-bg {
-            background-color: #f1f5f9;
-        }
-
-        .light-mode .bg-dark-card {
-            background-color: #ffffff;
-        }
-
-        .light-mode .border-dark-border {
-            border-color: #cbd5e1;
-        }
-
-        .light-mode .text-text-primary {
-            color: #0f172a;
-        }
-
-        .light-mode .text-text-secondary {
-            color: #64748b;
-        }
-
-        .light-mode .text-text-tertiary {
-            color: #94a3b8;
-        }
-
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-
-        .light-mode .section-title::after {
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-            border-radius: 2px;
-        }
-
-        .story-card {
-            transition: all 0.3s ease;
-        }
-
-        .story-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .light-mode .story-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
-        }
-
-        .terminal-window {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .light-mode .terminal-window {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 30px;
-        }
-
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #3b82f6;
-        }
-
-        .timeline-item:after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 25px;
-            width: 2px;
-            height: calc(100% + 5px);
-            background-color: #334155;
-        }
-
-        .timeline-item:last-child:after {
-            display: none;
-        }
-
-        .skill-tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .quote-card {
-            border-left: 4px solid #3b82f6;
-        }
-    </style>
 </head>
 <body class="bg-dark-bg text-text-primary">
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm border-b border-dark-border">
-        <div class="container mx-auto px-4">
-            <nav class="flex justify-between items-center py-4">
-                <a href="index.html" class="text-2xl font-bold text-accent-blue">Tuhin Bepari</a>
-                <div class="flex items-center space-x-6">
-                    <ul class="flex space-x-6">
-                      <li>
-                        <a href="index.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Home</a></li>
-                        <li><a href="about.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">About</a></li>
-                                                <li><a href="lifestyle.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Lifestyle</a></li>
-
-                        <li><a href="education.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Education</a></li>
-                        <li><a href="projects.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Projects</a></li>
-                        <li><a href="upwork.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Upwork</a></li>
-                        <li><a href="index.html#contact" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Contact</a></li>
-                    </ul>
-                    <!-- Dark/Light Mode Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-card border border-dark-border text-text-secondary hover:text-accent-blue transition-colors">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <site-navigation></site-navigation>
 
     <!-- Hero Section -->
     <section class="pt-24 pb-12">
@@ -523,5 +367,8 @@
             initThemeToggle();
         });
     </script>
+    <site-footer></site-footer>
+
+    <script src="js/components.js"></script>
 </body>
 </html>

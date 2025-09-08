@@ -1,0 +1,45 @@
+// Import all the web components
+import NavigationComponent from '../components/common/NavigationComponent.js';
+import HeroSection from '../components/home/HeroSection.js';
+import ServicesSection from '../components/home/ServicesSection.js';
+import SkillsSection from '../components/home/SkillsSection.js';
+import OpenSourceSection from '../components/home/OpenSourceSection.js';
+import UpworkSection from '../components/home/UpworkSection.js';
+import BlogSection from '../components/home/BlogSection.js';
+import ContactSection from '../components/home/ContactSection.js';
+import FooterComponent from '../components/common/FooterComponent.js';
+import LifestyleSection from '../components/LifestyleSection.js';
+import CodeBackground from '../components/common/CodeBackground.js';
+import TypingEffect from '../components/common/TypingEffect.js';
+import ConsoleBox from '../components/common/ConsoleBox.js';
+import ServiceCard from '../components/ServiceCard.js';
+import SkillCard from '../components/skills/SkillCard.js';
+import OpenSourceCard from '../components/OpenSourceCard.js';
+import UpworkStatsCard from '../components/home/UpworkStatsCard.js';
+import UpworkReviewCard from '../components/home/UpworkReviewCard.js';
+import BlogCard from '../components/blog/BlogCard.js';
+import EducationSection from '../components/home/EducationSection.js';
+import LoadingScreen from '../components/common/LoadingScreen.js';
+
+// Register the custom elements
+customElements.define('site-navigation', NavigationComponent);
+customElements.define('hero-section', HeroSection);
+customElements.define('services-section', ServicesSection);
+customElements.define('skills-section', SkillsSection);
+customElements.define('open-source-section', OpenSourceSection);
+customElements.define('upwork-section', UpworkSection);
+customElements.define('blog-section', BlogSection);
+customElements.define('contact-section', ContactSection);
+customElements.define('site-footer', FooterComponent);
+customElements.define('lifestyle-section', LifestyleSection);
+customElements.define('code-background', CodeBackground);
+customElements.define('typing-effect', TypingEffect);
+customElements.define('console-box', ConsoleBox);
+customElements.define('service-card', ServiceCard);
+customElements.define('skill-card', SkillCard);
+customElements.define('open-source-card', OpenSourceCard);
+customElements.define('upwork-stats-card', UpworkStatsCard);
+customElements.define('upwork-review-card', UpworkReviewCard);
+customElements.define('blog-card', BlogCard);
+customElements.define('education-section', EducationSection);
+customElements.define('loading-screen', LoadingScreen);

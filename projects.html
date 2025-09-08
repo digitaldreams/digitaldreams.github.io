@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -33,160 +34,9 @@
             }
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f1f5f9;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Light mode styles */
-        body.light-mode {
-            background-color: #f8fafc;
-            color: #0f172a;
-        }
-
-        .light-mode .bg-dark-bg {
-            background-color: #f1f5f9;
-        }
-
-        .light-mode .bg-dark-card {
-            background-color: #ffffff;
-        }
-
-        .light-mode .border-dark-border {
-            border-color: #cbd5e1;
-        }
-
-        .light-mode .text-text-primary {
-            color: #0f172a;
-        }
-
-        .light-mode .text-text-secondary {
-            color: #64748b;
-        }
-
-        .light-mode .text-text-tertiary {
-            color: #94a3b8;
-        }
-
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-
-        .light-mode .section-title::after {
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-            border-radius: 2px;
-        }
-
-        .project-card {
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .light-mode .project-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
-        }
-
-        .featured-project {
-            border: 2px solid #3b82f6;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            z-index: 10;
-        }
-
-        .terminal-window {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .light-mode .terminal-window {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-        }
-
-        .gradient-text {
-            background: linear-gradient(90deg, #3b82f6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .btn-primary {
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
-        }
-
-        .light-mode .btn-primary:hover {
-            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
-        }
-    </style>
 </head>
 <body class="bg-dark-bg text-text-primary">
-    <!-- Header -->
-    <header class="fixed top-0 w-full z-50 bg-dark-bg bg-opacity-95 backdrop-blur-sm border-b border-dark-border">
-        <div class="container mx-auto px-4">
-            <nav class="flex justify-between items-center py-4">
-                <a href="./index.html" class="text-2xl font-bold text-accent-blue">Tuhin Bepari</a>
-                <div class="flex items-center space-x-6">
-                    <ul class="flex space-x-6">
-                        <li><a href="./index.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Home</a></li>
-                        <li><a href="./about.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">About</a></li>
-                                                <li><a href="lifestyle.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Lifestyle</a></li>
-
-                        <li><a href="./experiences/experiences.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Experience</a></li>
-                                <li><a href="./education.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Education</a></li>
-                        <li><a href="./skills/skills.html" class="text-text-secondary hover:text-accent-blue transition-colors font-medium">Skills</a></li>
-                        <li><a href="projects.html" class="text-accent-blue font-medium border-b-2 border-accent-blue">Projects</a></li>
-                    </ul>
-                    <!-- Dark/Light Mode Toggle -->
-                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-card border border-dark-border text-text-secondary hover:text-accent-blue transition-colors">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <site-navigation></site-navigation>
 
     <!-- Hero Section -->
     <section class="pt-24 pb-12">
@@ -513,83 +363,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark-bg border-t border-dark-border py-12">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-8">
-                <div class="text-3xl font-bold text-accent-blue mb-4">Tuhin Bepari</div>
-                <p class="text-text-secondary mb-6">Full Stack Engineer | AI Code Generation Specialist | Team Leader</p>
+    <!-- Footer Component -->
+    <site-footer></site-footer>
 
-                <div class="flex justify-center space-x-6 mb-8">
-                    <a href="https://github.com/tuhinbepari" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://medium.com/@tuhinbepari" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-medium-m"></i>
-                    </a>
-                    <a href="https://www.upwork.com/freelancers/~01a53175d67e23083a" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-orange hover:text-white hover:border-accent-orange transition-all" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-upwork"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/tuhinbepari" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://twitter.com/tuhinbepari" class="w-12 h-12 rounded-full border border-dark-border flex items-center justify-center text-text-secondary hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <a href="./index.html#contact" class="inline-flex items-center px-6 py-3 border-2 border-accent-green text-accent-green font-bold rounded-lg hover:bg-accent-green hover:text-white transition-all btn-primary">
-                    Get In Touch <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-
-            <div class="text-center text-text-tertiary text-sm pt-8 border-t border-dark-border mt-8">
-                <p>© 2023 Tuhin Bepari. All rights reserved. Crafted with precision.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('shadow-lg');
-            } else {
-                header.classList.remove('shadow-lg');
-            }
-        });
-
-        // Theme toggle functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const themeToggle = document.getElementById('theme-toggle');
-            const body = document.body;
-            const themeIcon = themeToggle.querySelector('i');
-
-            // Check for saved theme preference or default to dark mode
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                body.classList.add('light-mode');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            }
-
-            themeToggle.addEventListener('click', function() {
-                body.classList.toggle('light-mode');
-
-                if (body.classList.contains('light-mode')) {
-                    themeIcon.classList.remove('fa-moon');
-                    themeIcon.classList.add('fa-sun');
-                    localStorage.setItem('theme', 'light');
-                } else {
-                    themeIcon.classList.remove('fa-sun');
-                    themeIcon.classList.add('fa-moon');
-                    localStorage.setItem('theme', 'dark');
-                }
-            });
-        });
-    </script>
+    <script src="js/components.js"></script>
 </body>
 </html>
