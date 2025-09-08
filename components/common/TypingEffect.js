@@ -11,15 +11,15 @@ export default class TypingEffect extends HTMLElement {
     connectedCallback() {
         // Store the inner content before we attach shadow DOM
         this.originalContent = this.innerHTML;
-        
+
         // Get texts from child span elements
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = this.innerHTML;
         this.texts = Array.from(tempDiv.querySelectorAll('span')).map(span => span.textContent);
-        
+
         // Render with shadow DOM
         this.render();
-        
+
         // Initialize typing effect after rendering
         setTimeout(() => {
             this.initTyping();
@@ -29,12 +29,7 @@ export default class TypingEffect extends HTMLElement {
     render() {
         // Create a shadow root
         const shadow = this.attachShadow({ mode: 'open' });
-        
-        // Import global styles
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'css/styles.css';
-        
+
         // Add component-specific styles
         const style = document.createElement('style');
         style.textContent = `
@@ -45,13 +40,12 @@ export default class TypingEffect extends HTMLElement {
                 display: inline-block;
             }
         `;
-        
+
         // Add template
         const template = document.createElement('template');
         template.innerHTML = `<span class="typing-container"></span>`;
-        
+
         // Append link, style and template to shadow root
-        shadow.appendChild(link);
         shadow.appendChild(style);
         shadow.appendChild(template.content.cloneNode(true));
     }
@@ -62,7 +56,7 @@ export default class TypingEffect extends HTMLElement {
     initTyping() {
         const element = this.shadowRoot.querySelector('.typing-container');
         if (!element || !this.texts.length) return;
-        
+
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
