@@ -13,11 +13,6 @@ export default class ConsoleBox extends HTMLElement {
         // Create a shadow root
         const shadow = this.attachShadow({ mode: 'open' });
 
-        // Import global styles
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = '/css/output.css';
-
         // Add component-specific styles
         const style = document.createElement('style');
         style.textContent = `
@@ -46,7 +41,6 @@ export default class ConsoleBox extends HTMLElement {
         `;
 
         // Append link, style and template to shadow root
-        shadow.appendChild(link);
         shadow.appendChild(style);
         shadow.appendChild(template.content.cloneNode(true));
     }
