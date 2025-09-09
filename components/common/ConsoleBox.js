@@ -13,14 +13,6 @@ export default class ConsoleBox extends HTMLElement {
         // Create a shadow root
         const shadow = this.attachShadow({ mode: 'open' });
 
-        // Add component-specific styles
-        const style = document.createElement('style');
-        style.textContent = `
-            :host {
-                display: block;
-            }
-        `;
-
         // Add template
         const template = document.createElement('template');
         template.innerHTML = `<div class="container mx-auto ">
@@ -34,14 +26,13 @@ export default class ConsoleBox extends HTMLElement {
                 <div class="ml-3 text-text-tertiary text-sm">${this.header}</div>
             </div>
             <div class="p-8 md:p-12">
-                <slot></slot>
+                <slot name="content"></slot>
             </div>
         </div>
         </div>
         `;
 
         // Append link, style and template to shadow root
-        shadow.appendChild(style);
         shadow.appendChild(template.content.cloneNode(true));
     }
 }

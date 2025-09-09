@@ -20,7 +20,7 @@
 
     <site-navigation></site-navigation>
 
-    <hero-section class="container pt-10 mx-auto ">
+    <hero-section class="container mx-auto pt-24 pb-12">
         <div slot="description">
         <div class="text-2xl text-text-secondary mb-8 max-w-3xl h-16">I am a
                                 <typing-effect speed="50" erase-speed="30" pause-time="2000" start-delay="1000">
@@ -33,7 +33,7 @@
                                 Full Stack Engineer specializing in modern web technologies. Expert in AI code generation tools and software engineering principles.
                             </p>
                             <div class="flex justify-center">
-                                <a href="#upwork" class="px-8 py-4 bg-accent-orange text-white font-bold rounded-lg btn-primary">
+                                <a href="#upwork" class="px-8 py-4 bg-orange-400 text-white font-bold rounded-lg btn-primary">
                                     <i class="fab fa-upwork mr-2"></i>Hire Me on Upwork
                                 </a>
                             </div>
@@ -58,7 +58,7 @@
 
     <script type="module">
         // Import helper functions
-        import HomeApi from './api/home.js';
+        import HomeService from './services/home.js';
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -84,7 +84,7 @@
         document.addEventListener('DOMContentLoaded', async () => {
             try {
                 // Fetch all data from API
-                await HomeApi.fetchAllData();
+                await HomeService.fetchAllData();
 
                 // Hide loading screen
                 const loadingScreen = document.getElementById('loadingScreen');

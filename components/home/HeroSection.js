@@ -114,13 +114,13 @@ export default class HeroSection extends HTMLElement {
         const template = document.createElement('template');
         template.innerHTML = `
         <!-- Hero Section -->
-        <section>
             <!-- Animated Background -->
             <code-background></code-background>
 
-            <div class="container mx-auto">
+            <div class="px-4 relative z-10">
                 <div class="mx-auto">
                     <console-box header="tuhin@portfolio:~">
+                        <div slot="content">
                         <div class="mb-4">
                             <span style="color: #3b82f6; font-family: 'JetBrains Mono', monospace;">$ </span>
                             <span style="color: #06b6d4; font-family: 'JetBrains Mono', monospace;">whoami</span>
@@ -131,27 +131,12 @@ export default class HeroSection extends HTMLElement {
                                 Tuhin Bepari<span class="typing-cursor"></span>
                             </h1>
 
-                            <div class="text-2xl">I am a
-                                <typing-effect speed="50" erase-speed="30" pause-time="2000" start-delay="1000">
-                                    <span>Laravel Expert with 8 years of experience</span>
-                                    <span>Symfony expert with 3 years of experience</span>
-                                </typing-effect>
-                            </div>
-
-                            <p class="text-xl">
-                                Full Stack Engineer specializing in modern web technologies. Expert in AI code generation tools and software engineering principles.
-                            </p>
-                            <div class="flex justify-center">
-                                <a href="#upwork" class="btn">
-                                    <i class="fab fa-upwork" style="margin-right: 0.5rem;"></i>Hire Me on Upwork
-                                </a>
-                            </div>
-                                <slot></slot>
+                                <slot name="description"></slot>
+                        </div>
                         </div>
                     </console-box>
                 </div>
             </div>
-        </section>
         `;
 
         // Append style and template to shadow root
