@@ -5,34 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open source projects by Tuhin Bepari (digitaldreams), including popular PHP packages like GooglePlace, LaraCrud, and Laravel SEO Tools.">
     <title>Tuhin Bepari - Open Source Projects</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dark-bg': '#0f172a',
-                        'dark-card': '#1e293b',
-                        'dark-border': '#334155',
-                        'accent-blue': '#3b82f6',
-                        'accent-cyan': '#06b6d4',
-                        'accent-green': '#10b981',
-                        'accent-orange': '#f97316',
-                        'accent-purple': '#8b5cf6',
-                        'text-primary': '#f1f5f9',
-                        'text-secondary': '#cbd5e1',
-                        'text-tertiary': '#94a3b8',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
+    <link rel="stylesheet" href="css/output.css">
+    <script type="module">
+        import '../js/components.js';
+
     </script>
 </head>
 <body class="bg-dark-bg text-text-primary">
@@ -41,37 +19,24 @@
     <!-- Hero Section -->
     <section class="pt-24 pb-12">
         <div class="container mx-auto px-4">
-            <div class="mx-auto">
-                <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden terminal-window">
-                    <div class="flex items-center px-4 py-3 bg-dark-border">
-                        <div class="flex space-x-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div class="ml-3 text-text-tertiary text-sm">tuhin@portfolio:~</div>
+            <console-box header="tuhin@portfolio:~">
+                <div slot="content">
+                    <div class="mb-6">
+                        <span class="text-accent-blue font-mono">$ </span>
+                        <span class="text-accent-cyan font-mono">ls -la projects/</span>
                     </div>
-                    <div class="p-8 md:p-12">
-                        <div class="mb-6">
-                            <span class="text-accent-blue font-mono">$ </span>
-                            <span class="text-accent-cyan font-mono">ls -la projects/</span>
-                        </div>
-
-                        <div class="mt-4">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-                                Open Source Projects
-                            </h1>
-
-                            <p class="text-xl text-text-secondary max-w-3xl">
-                                My popular PHP packages on Packagist with over 100,000 total downloads
-                            </p>
-                        </div>
+                    <div class="mt-4">
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+                            Open Source Projects
+                        </h1>
+                        <p class="text-xl text-text-secondary max-w-3xl">
+                            My popular PHP packages on Packagist with over 100,000 total downloads
+                        </p>
                     </div>
                 </div>
-            </div>
+            </console-box>
         </div>
     </section>
-
     <!-- Featured Projects Section -->
     <section class="py-12 bg-dark-bg">
         <div class="container mx-auto px-4">
