@@ -4,8 +4,8 @@
   "description": "HTML project with Tailwind CSS v4",
   "main": "index.js",
   "scripts": {
-    "build": "./build-styles.sh",
-    "watch": "npm run build && echo 'Initial build complete. Manual re-run of npm run build is needed on changes.'"
+    "build": "tailwindcss -i ./css/input.css -o ./css/output.css --content './*.html,./components/**/*.js' --minify",
+    "watch": "tailwindcss -i ./css/input.css -o ./css/output.css --content './*.html,./components/**/*.js' --watch"
   },
   "keywords": ["tailwind", "css", "html", "v4"],
   "author": "",
