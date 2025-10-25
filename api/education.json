@@ -1,0 +1,37 @@
+[
+    {
+        "degree": "Bachelor's Honours in Political Science",
+        "institution": "Dhaka College",
+        "period": "2009 - 2013",
+        "description": "Completed Bachelor's Honours degree in Political Science while simultaneously pursuing technology training and skill development in web design and development.",
+        "tags": ["Political Science", "Academic Research", "Critical Analysis"]
+    },
+    {
+        "degree": "Master's in Political Science",
+        "institution": "Dhaka College",
+        "period": "2013 - 2014",
+        "description": "Continued academic studies in Political Science while building expertise in web technologies and programming. Successfully balanced formal education with practical technology training.",
+        "tags": ["Political Science", "Academic Writing", "Research Methodology"]
+    },
+    {
+        "degree": "Diploma in Web Design and Development",
+        "institution": "DIIT (Dhaka Institute of Information Technology)",
+        "period": "2011 - 2012",
+        "description": "Specialized diploma program focusing on web design and development. Awarded administrative honors and graduated first in final examination. Gained hands-on experience with HTML, CSS, and JavaScript.",
+        "tags": ["Web Development", "HTML/CSS", "JavaScript"]
+    },
+    {
+        "degree": "IELTS Academic Module",
+        "institution": "British Council",
+        "period": "2010",
+        "description": "Achieved a score of 6.5 in the IELTS Academic Module, establishing a strong foundation in English language skills essential for technical documentation and global collaboration in software development.",
+        "tags": ["English Proficiency", "Technical Communication", "Academic Writing"]
+    },
+    {
+        "degree": "Computer Basics Training",
+        "institution": "NIIT (National Institute of Information Technology)",
+        "period": "2010",
+        "description": "Comprehensive training in computer basics including Microsoft Office, Photoshop, and Illustrator. Provided foundational knowledge in digital tools and design principles that complemented web development skills.",
+        "tags": ["Microsoft Office", "Adobe Photoshop", "Adobe Illustrator"]
+    }
+]

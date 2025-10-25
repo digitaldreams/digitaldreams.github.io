@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Upwork profile of Tuhin Bepari, a Senior Web Developer with 10+ years experience in Laravel, Symfony, and React. Over $100K earned with 56 completed jobs.">
-    <title>Tuhin Bepari - Upwork Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tuhin Bepari - Full Stack Engineer</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dark-bg': '#0f172a',
-                        'dark-card': '#1e293b',
-                        'dark-border': '#334155',
-                        'accent-blue': '#3b82f6',
-                        'accent-cyan': '#06b6d4',
-                        'accent-green': '#10b981', // Upwork's brand color for emphasis
-                        'accent-orange': '#f97316',
-                        'accent-purple': '#8b5cf6',
-                        'text-primary': '#f1f5f9',
-                        'text-secondary': '#cbd5e1',
-                        'text-tertiary': '#94a3b8',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/output.css">
+
+    <script type="module">
+        // Import and register all other components
+        import '../js/components.js';
     </script>
 </head>
+
 <body class="bg-dark-bg text-text-primary">
     <site-navigation></site-navigation>
 
@@ -43,19 +26,13 @@
         <section class="pt-20 pb-16">
             <div class="container mx-auto px-4">
                 <div class="mx-auto">
-                    <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden terminal-window">
-                        <div class="flex items-center px-4 py-3 bg-dark-border">
-                            <div class="flex space-x-2">
-                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            </div>
-                            <div class="ml-3 text-text-tertiary text-sm">tuhin@portfolio:~</div>
-                        </div>
-                        <div class="p-8 md:p-12">
+                    <console-box header="tuhin@portfolio:~">
+                        <div slot="content">
+                            <div class="p-8 md:p-12">
 
                             <div class="text-center">
-                                <div class="inline-block bg-green-500/10 text-accent-green px-4 py-2 rounded-full font-bold mb-4">
+                                <div
+                                    class="inline-block bg-green-500/10 text-accent-green px-4 py-2 rounded-full font-bold mb-4">
                                     <i class="fas fa-check-circle"></i> TOP RATED PLUS on Upwork
                                 </div>
                                 <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-text">Senior Web Developer</h1>
@@ -64,25 +41,27 @@
                                 </p>
                                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
                                     <div class="bg-dark-bg p-6 rounded-xl stats-card">
-                                        <div class="text-5xl font-bold text-white mb-2">$100K+</div>
+                                        <div class="text-5xl font-bold dark:text-white mb-2">$100K+</div>
                                         <div class="text-text-secondary">Total Earnings</div>
                                     </div>
                                     <div class="bg-dark-bg p-6 rounded-xl stats-card">
-                                        <div class="text-5xl font-bold text-white mb-2">56</div>
+                                        <div class="text-5xl font-bold dark:text-white mb-2">56</div>
                                         <div class="text-text-secondary">Completed Jobs</div>
                                     </div>
                                     <div class="bg-dark-bg p-6 rounded-xl stats-card">
-                                        <div class="text-5xl font-bold text-white mb-2">6,266</div>
+                                        <div class="text-5xl font-bold darK:text-white mb-2">6,266</div>
                                         <div class="text-text-secondary">Total Hours</div>
                                     </div>
                                     <div class="bg-dark-bg p-6 rounded-xl stats-card">
-                                        <div class="text-5xl font-bold text-white mb-2">$30/hr</div>
+                                        <div class="text-5xl font-bold dark:text-white mb-2">$30/hr</div>
                                         <div class="text-text-secondary">Hourly Rate</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                    </console-box>
+
                 </div>
             </div>
         </section>
@@ -93,13 +72,15 @@
                 <div class=" mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-3xl md:text-4xl font-bold section-title">Technical Expertise</h2>
-                        <p class="text-lg text-text-secondary mt-4">10+ years experience with PHP frameworks and modern web technologies</p>
+                        <p class="text-lg text-text-secondary mt-4">10+ years experience with PHP frameworks and modern
+                            web technologies</p>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bg-dark-card p-6 rounded-lg card-hover">
                             <div class="text-accent-blue text-3xl mb-4"><i class="fab fa-laravel"></i></div>
                             <h3 class="text-xl font-bold">Laravel Development</h3>
-                            <p class="text-text-secondary">10+ years experience with Laravel from version 4.2 to 12. Expert in all Laravel features and best practices.</p>
+                            <p class="text-text-secondary">10+ years experience with Laravel from version 4.2 to 12.
+                                Expert in all Laravel features and best practices.</p>
                             <div class="flex flex-wrap mt-4">
                                 <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">Laravel</span>
                                 <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">APIs</span>
@@ -109,7 +90,8 @@
                         <div class="bg-dark-card p-6 rounded-lg card-hover">
                             <div class="text-accent-blue text-3xl mb-4"><i class="fab fa-symfony"></i></div>
                             <h3 class="text-xl font-bold">Symfony & DDD</h3>
-                            <p class="text-text-secondary">3+ years experience with Symfony and Domain-Driven Design separating business logic from framework code.</p>
+                            <p class="text-text-secondary">3+ years experience with Symfony and Domain-Driven Design
+                                separating business logic from framework code.</p>
                             <div class="flex flex-wrap mt-4">
                                 <span class="skill-tag bg-black bg-opacity-20 text-gray-400">Symfony</span>
                                 <span class="skill-tag bg-black bg-opacity-20 text-gray-400">DDD</span>
@@ -119,7 +101,8 @@
                         <div class="bg-dark-card p-6 rounded-lg card-hover">
                             <div class="text-accent-blue text-3xl mb-4"><i class="fab fa-react"></i></div>
                             <h3 class="text-xl font-bold">Frontend Development</h3>
-                            <p class="text-text-secondary">Building modern UIs with React, Vue.js, and state management for interactive web applications.</p>
+                            <p class="text-text-secondary">Building modern UIs with React, Vue.js, and state management
+                                for interactive web applications.</p>
                             <div class="flex flex-wrap mt-4">
                                 <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">React</span>
                                 <span class="skill-tag bg-purple-500 bg-opacity-20 text-purple-400">Vue.js</span>
@@ -129,7 +112,8 @@
                         <div class="bg-dark-card p-6 rounded-lg card-hover">
                             <div class="text-accent-blue text-3xl mb-4"><i class="fas fa-database"></i></div>
                             <h3 class="text-xl font-bold">Database & Testing</h3>
-                            <p class="text-text-secondary">Expert in MySQL, MongoDB, and comprehensive testing with PHPUnit for 100% code coverage.</p>
+                            <p class="text-text-secondary">Expert in MySQL, MongoDB, and comprehensive testing with
+                                PHPUnit for 100% code coverage.</p>
                             <div class="flex flex-wrap mt-4">
                                 <span class="skill-tag bg-orange-500 bg-opacity-20 text-orange-400">MySQL</span>
                                 <span class="skill-tag bg-green-500 bg-opacity-20 text-green-400">MongoDB</span>
@@ -158,10 +142,13 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p class="text-text-secondary italic mb-6">
-                            "I worked with Tuhin many times. He's a good developer and always deliver upon my expectations. I'll keep working with him in a near feature. If you want a skilled…"
+                            "I worked with Tuhin many times. He's a good developer and always deliver upon my
+                            expectations. I'll keep working with him in a near feature. If you want a skilled…"
                         </p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">JD</div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">
+                                JD</div>
                             <div>
                                 <h4 class="font-bold">John Davis</h4>
                                 <p class="text-text-tertiary text-sm">Laravel + Vue.js Platform Project</p>
@@ -181,10 +168,13 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p class="text-text-secondary italic mb-6">
-                            "Tuhin is one of the best freelancer I ever met on Upwork. Looking forward to work with him again on a future project."
+                            "Tuhin is one of the best freelancer I ever met on Upwork. Looking forward to work with him
+                            again on a future project."
                         </p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">SM</div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">
+                                SM</div>
                             <div>
                                 <h4 class="font-bold">Sarah Miller</h4>
                                 <p class="text-text-tertiary text-sm">Platform Improvements Project</p>
@@ -207,7 +197,9 @@
                             "Tuhin is just the best."
                         </p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">RK</div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">
+                                RK</div>
                             <div>
                                 <h4 class="font-bold">Robert King</h4>
                                 <p class="text-text-tertiary text-sm">Backend Functionalities Project</p>
@@ -230,7 +222,9 @@
                             "Great to work with"
                         </p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">AJ</div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">
+                                AJ</div>
                             <div>
                                 <h4 class="font-bold">Alex Johnson</h4>
                                 <p class="text-text-tertiary text-sm">Laravel CRUD Interface Project</p>
@@ -249,24 +243,29 @@
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold section-title">Building Lasting Partnerships</h2>
-                    <p class="text-lg text-text-secondary mt-4">My success is built on trust, quality, and fostering long-term client relationships.</p>
+                    <p class="text-lg text-text-secondary mt-4">My success is built on trust, quality, and fostering
+                        long-term client relationships.</p>
                 </div>
                 <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 text-center">
                     <div class="bg-dark-card p-8 rounded-xl card-hover">
                         <div class="text-5xl text-accent-cyan mb-4"><i class="fas fa-redo-alt"></i></div>
                         <h3 class="text-2xl font-bold mb-2">High Rate of Repeat Clients</h3>
-                        <p class="text-text-secondary">A significant portion of my work comes from repeat clients who trust me as their go-to developer for ongoing needs and new projects.</p>
+                        <p class="text-text-secondary">A significant portion of my work comes from repeat clients who
+                            trust me as their go-to developer for ongoing needs and new projects.</p>
                     </div>
                     <div class="bg-dark-card p-8 rounded-xl card-hover">
                         <div class="text-5xl text-accent-purple mb-4"><i class="fas fa-calendar-alt"></i></div>
                         <h3 class="text-2xl font-bold mb-2">Long-Term Engagements</h3>
-                        <p class="text-text-secondary">I specialize in forming long-term partnerships, becoming an integral part of my clients' teams to support their growth and evolving technical requirements over years.</p>
+                        <p class="text-text-secondary">I specialize in forming long-term partnerships, becoming an
+                            integral part of my clients' teams to support their growth and evolving technical
+                            requirements over years.</p>
                     </div>
                 </div>
 
                 <!-- Skills Section -->
                 <div class="mt-16 text-center">
-                    <h3 class="text-3xl md:text-4xl  font-bold text-center section-title mb-12">Key Skills & Technologies</h3>
+                    <h3 class="text-3xl md:text-4xl  font-bold text-center section-title mb-12">Key Skills &
+                        Technologies</h3>
                     <div class="flex flex-wrap justify-center gap-3">
                         <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">PHP</span>
                         <span class="skill-tag bg-blue-500 bg-opacity-20 text-blue-400">Laravel</span>
@@ -297,7 +296,9 @@
                             "Experience is not what happens to you, but what you do with what happens to you."
                         </p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">TB</div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent-blue flex items-center justify-center text-white font-bold mr-4">
+                                TB</div>
                             <div>
                                 <h4 class="text-lg font-bold">Tuhin Bepari</h4>
                                 <p class="text-text-secondary">Senior Web Developer</p>
@@ -315,9 +316,11 @@
                     <i class="fab fa-upwork text-6xl text-accent-green mb-6"></i>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Ready to Start Your Project?</h2>
                     <p class="text-text-secondary text-lg mb-8">
-                        With over $100K earned and 56 completed jobs on Upwork, I bring proven expertise and reliability to every project. Let's discuss how I can bring the same level of dedication to your project.
+                        With over $100K earned and 56 completed jobs on Upwork, I bring proven expertise and reliability
+                        to every project. Let's discuss how I can bring the same level of dedication to your project.
                     </p>
-                    <a href="https://www.upwork.com/freelancers/~01c781f2a1b3a8a3e7" target="_blank" class="inline-block px-10 py-4 font-bold rounded-lg btn-upwork btn-primary">
+                    <a href="https://www.upwork.com/freelancers/~01c781f2a1b3a8a3e7" target="_blank"
+                        class="inline-block px-10 py-4 font-bold rounded-lg btn-upwork btn-primary">
                         <i class="fab fa-upwork mr-2"></i>Invite Me on Upwork
                     </a>
                 </div>
@@ -330,4 +333,5 @@
 
     <script src="js/components.js"></script>
 </body>
+
 </html>

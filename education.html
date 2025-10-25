@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Education background of Tuhin Bepari, including academic studies in Political Science and technology training in web development.">
-    <title>Tuhin Bepari - Education Background</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tuhin Bepari - Full Stack Engineer</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dark-bg': '#0f172a',
-                        'dark-card': '#1e293b',
-                        'dark-border': '#334155',
-                        'accent-blue': '#3b82f6',
-                        'accent-cyan': '#06b6d4',
-                        'accent-green': '#10b981',
-                        'accent-orange': '#f97316',
-                        'accent-purple': '#8b5cf6',
-                        'text-primary': '#f1f5f9',
-                        'text-secondary': '#cbd5e1',
-                        'text-tertiary': '#94a3b8',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/output.css">
+
+    <script type="module">
+        // Import and register all other components
+        import '../js/components.js';
     </script>
 </head>
 <body class="bg-dark-bg text-text-primary">
@@ -42,134 +24,31 @@
     <section class="pt-24 pb-12">
         <div class="container mx-auto px-4">
             <div class="mx-auto">
-                <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden terminal-window">
-                    <div class="flex items-center px-4 py-3 bg-dark-border">
-                        <div class="flex space-x-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div class="ml-3 text-text-tertiary text-sm">tuhin@portfolio:~</div>
-                    </div>
-                    <div class="p-8 md:p-12">
-                        <div class="mb-6">
-                            <span class="text-accent-blue font-mono">$ </span>
-                            <span class="text-accent-cyan font-mono">cat education.txt</span>
-                        </div>
+                   <console-box header="tuhin@portfolio:~">
+                        <div slot="content">
+                            <div class="p-8 md:p-12">
 
-                        <div class="mt-4">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
-                                Education
-                            </h1>
+                                <div class="">
+                                    <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">
+                                        Education
+                                    </h1>
 
-                            <p class="text-xl text-text-secondary max-w-3xl">
-                                Academic studies and technology training that shaped my unique background
-                            </p>
+                                    <p class="text-xl text-text-secondary max-w-3xl">
+                                        Academic studies and technology training that shaped my unique background
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </console-box>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section class="py-12 bg-dark-bg">
-        <div class="container mx-auto px-4">
-            <div class="mx-auto">
-                <div class="bg-dark-card border border-dark-border rounded-xl p-8">
-                    <div class="timeline-item">
-                        <div class="flex flex-wrap justify-between items-start mb-2">
-                            <h3 class="text-2xl font-bold text-accent-blue">Bachelor's Honours in Political Science</h3>
-                            <span class="text-text-tertiary bg-dark-bg px-3 py-1 rounded-full mt-1">2009 - 2013</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-accent-cyan mb-3">Dhaka College</h4>
-                        <p class="text-text-secondary mb-4">
-                            Completed Bachelor's Honours degree in Political Science while simultaneously pursuing technology training and skill development in web design and development.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-accent-blue bg-opacity-20 text-accent-blue text-xs rounded-full">Political Science</span>
-                            <span class="px-3 py-1 bg-accent-green bg-opacity-20 text-accent-green text-xs rounded-full">Academic Research</span>
-                            <span class="px-3 py-1 bg-accent-purple bg-opacity-20 text-accent-purple text-xs rounded-full">Critical Analysis</span>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex flex-wrap justify-between items-start mb-2">
-                            <h3 class="text-2xl font-bold text-accent-blue">Master's in Political Science</h3>
-                            <span class="text-text-tertiary bg-dark-bg px-3 py-1 rounded-full mt-1">2013 - 2014</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-accent-cyan mb-3">Dhaka College</h4>
-                        <p class="text-text-secondary mb-4">
-                            Continued academic studies in Political Science while building expertise in web technologies and programming. Successfully balanced formal education with practical technology training.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-accent-blue bg-opacity-20 text-accent-blue text-xs rounded-full">Political Science</span>
-                            <span class="px-3 py-1 bg-accent-green bg-opacity-20 text-accent-green text-xs rounded-full">Academic Writing</span>
-                            <span class="px-3 py-1 bg-accent-purple bg-opacity-20 text-accent-purple text-xs rounded-full">Research Methodology</span>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex flex-wrap justify-between items-start mb-2">
-                            <h3 class="text-2xl font-bold text-accent-blue">Diploma in Web Design and Development</h3>
-                            <span class="text-text-tertiary bg-dark-bg px-3 py-1 rounded-full mt-1">2011 - 2012</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-accent-cyan mb-3">DIIT (Dhaka Institute of Information Technology)</h4>
-                        <p class="text-text-secondary mb-4">
-                            Specialized diploma program focusing on web design and development. Awarded administrative honors and graduated first in final examination. Gained hands-on experience with HTML, CSS, and JavaScript.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-accent-blue bg-opacity-20 text-accent-blue text-xs rounded-full">Web Development</span>
-                            <span class="px-3 py-1 bg-accent-green bg-opacity-20 text-accent-green text-xs rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-accent-purple bg-opacity-20 text-accent-purple text-xs rounded-full">JavaScript</span>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex flex-wrap justify-between items-start mb-2">
-                            <h3 class="text-2xl font-bold text-accent-blue">IELTS Academic Module</h3>
-                            <span class="text-text-tertiary bg-dark-bg px-3 py-1 rounded-full mt-1">2010</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-accent-cyan mb-3">British Council</h4>
-                        <p class="text-text-secondary mb-4">
-                            Achieved a score of 6.5 in the IELTS Academic Module, establishing a strong foundation in English language skills essential for technical documentation and global collaboration in software development.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-accent-blue bg-opacity-20 text-accent-blue text-xs rounded-full">English Proficiency</span>
-                            <span class="px-3 py-1 bg-accent-green bg-opacity-20 text-accent-green text-xs rounded-full">Technical Communication</span>
-                            <span class="px-3 py-1 bg-accent-purple bg-opacity-20 text-accent-purple text-xs rounded-full">Academic Writing</span>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="flex flex-wrap justify-between items-start mb-2">
-                            <h3 class="text-2xl font-bold text-accent-blue">Computer Basics Training</h3>
-                            <span class="text-text-tertiary bg-dark-bg px-3 py-1 rounded-full mt-1">2010</span>
-                        </div>
-                        <h4 class="text-xl font-semibold text-accent-cyan mb-3">NIIT (National Institute of Information Technology)</h4>
-                        <p class="text-text-secondary mb-4">
-                            Comprehensive training in computer basics including Microsoft Office, Photoshop, and Illustrator. Provided foundational knowledge in digital tools and design principles that complemented web development skills.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-accent-blue bg-opacity-20 text-accent-blue text-xs rounded-full">Microsoft Office</span>
-                            <span class="px-3 py-1 bg-accent-green bg-opacity-20 text-accent-green text-xs rounded-full">Adobe Photoshop</span>
-                            <span class="px-3 py-1 bg-accent-purple bg-opacity-20 text-accent-purple text-xs rounded-full">Adobe Illustrator</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 text-center">
-                    <a href="projects.html" class="inline-flex items-center px-6 py-3 border-2 border-accent-green text-accent-green font-bold rounded-lg hover:bg-accent-green hover:text-white transition-all">
-                        View Projects <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <education-section></education-section>
 
     <!-- Footer Component -->
     <site-footer></site-footer>
 
-    <script src="js/components.js"></script>
 </body>
 </html>

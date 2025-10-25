@@ -18,7 +18,7 @@ import OpenSourceCard from '../components/OpenSourceCard.js';
 import UpworkStatsCard from '../components/home/UpworkStatsCard.js';
 import UpworkReviewCard from '../components/home/UpworkReviewCard.js';
 import BlogCard from '../components/blog/BlogCard.js';
-import EducationSection from '../components/home/EducationSection.js';
+import EducationSection from '../components/sections/EducationSection.js';
 import LoadingScreen from '../components/common/LoadingScreen.js';
 
 // Register the custom elements

@@ -1,87 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tuhin Bepari - Full Stack Engineer with 10+ years of experience following a balanced lifestyle approach to sustainable productivity and creativity since 2012.">
-    <title>Tuhin Bepari - Developer Lifestyle</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tuhin Bepari - Full Stack Engineer</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'dark-bg': '#0f172a',
-                        'dark-card': '#1e293b',
-                        'dark-border': '#334155',
-                        'accent-blue': '#3b82f6',
-                        'accent-cyan': '#06b6d4',
-                        'accent-green': '#10b981',
-                        'accent-orange': '#f97316',
-                        'accent-purple': '#8b5cf6',
-                        'accent-coffee': '#d97706',
-                        'text-primary': '#f1f5f9',
-                        'text-secondary': '#cbd5e1',
-                        'text-tertiary': '#94a3b8',
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/output.css">
+
+    <script type="module">
+        // Import and register all other components
+        import '../js/components.js';
     </script>
 </head>
+
 <body class="bg-dark-bg text-text-primary">
     <site-navigation></site-navigation>
 
     <!-- Hero Section -->
-    <section class="flex items-center pt-16 pb-20 relative overflow-hidden">
+    <section class="flex items-center pt-20 pb-20 relative overflow-hidden">
         <!-- Animated Background -->
-        <div class="code-background" id="codeBackground"></div>
-
+        <code-background></code-background>
         <div class="container mx-auto px-4 relative z-10">
             <div class="mx-auto">
-                <div class="bg-dark-card border border-dark-border rounded-xl overflow-hidden terminal-window">
-                    <div class="flex items-center px-4 py-3 bg-dark-border">
-                        <div class="flex space-x-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                        </div>
-                        <div class="ml-3 text-text-tertiary text-sm">tuhin@lifestyle:~</div>
-                    </div>
-                    <div class="p-8 md:p-12">
-                        <div class="mb-4">
-                            <span class="text-accent-blue font-mono">$ </span>
-                            <span class="text-accent-cyan font-mono">cat developer-lifestyle.txt</span>
-                        </div>
+                <console-box header="tuhin@portfolio:~">
+                    <div slot="content">
+                        <div class="p-8 md:p-12">
 
-                        <div class="mt-8">
-                            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
-                                The Balanced Developer<span class="typing-cursor"></span>
-                            </h1>
+                            <div class="">
+                                <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">
+                                    The Balanced Developer<span class="typing-cursor"></span>
+                                </h1>
 
-                            <div class="text-2xl text-text-secondary mb-8 max-w-3xl h-16">How <span id="lifestyleTyping"></span></div>
+                                <div class="text-2xl text-text-secondary mb-8 max-w-3xl">How <typing-effect speed="50"
+                                        erase-speed="30" pause-time="2000" start-delay="1000">
+                                        <span>I balance my passion for coding with a healthy lifestyle.</span>
+                                        <span>I build a career that thrives, not just survives.</span>
+                                    </typing-effect></div>
 
-                            <p class="text-xl text-text-secondary mb-8">
-                                A journey through sustainable practices, wellness, and the art of maintaining passion for coding
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="#morning" class="px-8 py-4 bg-accent-blue text-white font-bold rounded-lg btn-primary">
-                                    Explore My Routine
-                                </a>
-                                <a href="#philosophy" class="px-8 py-4 border-2 border-accent-blue text-accent-blue font-bold rounded-lg hover:bg-accent-blue hover:text-white transition-all">
-                                    My Philosophy
-                                </a>
+                                <p class="text-xl text-text-secondary mb-8">
+                                    A journey through sustainable practices, wellness, and the art of maintaining
+                                    passion for coding
+                                </p>
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="#morning"
+                                        class="px-8 py-4 border-2 border-accent-blue text-accent-blue font-bold rounded-lg hover:bg-accent-blue ">
+                                        Explore My Routine
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </console-box>
+
             </div>
         </div>
     </section>
@@ -102,13 +77,16 @@
 
                     <div class="prose prose-invert max-w-none">
                         <p class="text-text-secondary mb-6 text-lg">
-                            Since the beginning of my career in 2012, my day has begun at 5 AM with prayer - a moment of reflection and gratitude that sets the tone for everything that follows.
+                            Since the beginning of my career in 2012, my day has begun at 5 AM with prayer - a moment of
+                            reflection and gratitude that sets the tone for everything that follows.
                             This quiet time centers me and prepares my mind for the challenges ahead.
                         </p>
 
                         <p class="text-text-secondary mb-6 text-lg">
-                            After prayer, I have a light snack to energize my body without weighing it down. Then comes my 30-minute cycling session -
-                            a perfect way to wake up my muscles and get my blood flowing. The fresh air and movement clear my mind and prepare it for
+                            After prayer, I have a light snack to energize my body without weighing it down. Then comes
+                            my 30-minute cycling session -
+                            a perfect way to wake up my muscles and get my blood flowing. The fresh air and movement
+                            clear my mind and prepare it for
                             the deep thinking work that lies ahead.
                         </p>
 
@@ -119,7 +97,8 @@
                         </div>
 
                         <p class="text-text-secondary text-lg">
-                            By the time I return, I'm ready for breakfast and the most important part of my day - my peak thinking hours.
+                            By the time I return, I'm ready for breakfast and the most important part of my day - my
+                            peak thinking hours.
                         </p>
                     </div>
                 </div>
@@ -196,9 +175,11 @@
                             creative problem-solving all happen during this window.
                         </p>
 
-                        <div class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-6">
+                        <div
+                            class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-6">
                             <p class="text-text-primary italic text-lg">
-                                "The code that writes itself in the morning is often born from the rhythm of the morning ritual."
+                                "The code that writes itself in the morning is often born from the rhythm of the morning
+                                ritual."
                             </p>
                         </div>
 
@@ -278,7 +259,8 @@
                     </p>
                 </div>
 
-                <div class="bg-gradient-to-r from-accent-coffee to-accent-orange bg-opacity-10 border border-accent-coffee border-opacity-30 rounded-xl p-8 mb-12">
+                <div
+                    class="bg-gradient-to-r from-accent-coffee to-accent-orange bg-opacity-10 border border-accent-coffee border-opacity-30 rounded-xl p-8 mb-12">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
                         <div>
                             <h3 class="text-2xl font-bold mb-6 text-accent-coffee">The Developer's Best Friend</h3>
@@ -309,7 +291,8 @@
                                 <div class="text-8xl text-accent-coffee pulse">
                                     <i class="fas fa-mug-hot"></i>
                                 </div>
-                                <div class="absolute -top-4 -right-4 bg-accent-orange text-white text-xs px-3 py-1 rounded-full font-bold">
+                                <div
+                                    class="absolute -top-4 -right-4 bg-accent-orange text-white text-xs px-3 py-1 rounded-full font-bold">
                                     #1 Developer Fuel
                                 </div>
                             </div>
@@ -387,7 +370,8 @@
                         </div>
 
                         <p class="text-text-secondary text-lg">
-                            This connection between nature and technology enriches both my personal life and my professional work.
+                            This connection between nature and technology enriches both my personal life and my
+                            professional work.
                         </p>
                     </div>
                 </div>
@@ -399,7 +383,8 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3">Rooftop Gardening</h3>
                         <p class="text-text-secondary mb-4">
-                            Tending to plants teaches patience, observation, and long-term thinking—skills that translate directly to software development.
+                            Tending to plants teaches patience, observation, and long-term thinking—skills that
+                            translate directly to software development.
                         </p>
                         <div class="flex items-center text-sm text-accent-green">
                             <i class="fas fa-sun mr-2"></i>
@@ -413,7 +398,8 @@
                         </div>
                         <h3 class="text-xl font-bold mb-3">Continuous Learning</h3>
                         <p class="text-text-secondary mb-4">
-                            Reading technical and non-technical books maintains curiosity and expands perspectives beyond coding.
+                            Reading technical and non-technical books maintains curiosity and expands perspectives
+                            beyond coding.
                         </p>
                         <div class="flex items-center text-sm text-accent-purple">
                             <i class="fas fa-book-open mr-2"></i>
@@ -479,7 +465,8 @@
                         The projects I was most proud of, the solutions I was most creative with, all came
                         after I had taken real time to disconnect and recharge.
                     </p>
-                    <div class="bg-gradient-to-r from-accent-coffee to-accent-orange bg-opacity-20 border border-accent-coffee border-opacity-30 rounded-lg p-6 my-6">
+                    <div
+                        class="bg-gradient-to-r from-accent-coffee to-accent-orange bg-opacity-20 border border-accent-coffee border-opacity-30 rounded-lg p-6 my-6">
                         <p class="text-text-primary italic">
                             "The code that writes itself on Monday morning is often born from the rest
                             and experiences of the weekend."
@@ -509,16 +496,16 @@
                             <span>Gardening and plant care</span>
                         </div>
                         <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
-                            <i class="fas fa-utensils text-accent-orange mr-3"></i>
-                            <span>Cooking and culinary exploration</span>
+                            <i class="fas fa-biking text-accent-orange mr-3"></i>
+                            <span>Long Ride Cycling</span>
                         </div>
                         <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
                             <i class="fas fa-book-reader text-accent-purple mr-3"></i>
                             <span>Reading non-technical books</span>
                         </div>
                         <div class="flex items-center p-3 bg-dark-bg border border-dark-border rounded-lg">
-                            <i class="fas fa-music text-accent-cyan mr-3"></i>
-                            <span>Music and creative pursuits</span>
+                            <i class="fas fa-eye text-accent-cyan mr-3"></i>
+                            <span>Avoid computer Screen</span>
                         </div>
                     </div>
                 </div>
@@ -540,11 +527,13 @@
                 <div class="story-section pl-8 mb-8">
                     <h3 class="text-2xl font-bold mb-4">Beyond the Next Framework</h3>
                     <p class="text-text-secondary mb-6">
-                        Since 2012, I've watched countless developers chase the latest frameworks and tools, hoping to stay relevant.
+                        Since 2012, I've watched countless developers chase the latest frameworks and tools, hoping to
+                        stay relevant.
                         While staying current is important, the real key to career longevity is building
                         timeless skills and adaptability through a balanced lifestyle.
                     </p>
-                    <div class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-6">
+                    <div
+                        class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-6">
                         <p class="text-text-primary italic">
                             "The frameworks will change, but the ability to learn new frameworks quickly
                             will keep you employed forever."
@@ -568,8 +557,10 @@
                             <div>
                                 <h4 class="font-bold text-xl mb-3">Plant: Build Strong Foundations (2012-Present)</h4>
                                 <p class="text-text-secondary">
-                                    Since the beginning of my career, I've invested in computer science fundamentals, software engineering principles,
-                                    and core programming concepts that remain relevant regardless of technological shifts.
+                                    Since the beginning of my career, I've invested in computer science fundamentals,
+                                    software engineering principles,
+                                    and core programming concepts that remain relevant regardless of technological
+                                    shifts.
                                 </p>
                             </div>
                         </div>
@@ -581,7 +572,8 @@
                             <div>
                                 <h4 class="font-bold text-xl mb-3">Water: Maintain Balance</h4>
                                 <p class="text-text-secondary">
-                                    For over a decade, I've protected my physical and mental health through consistent routines,
+                                    For over a decade, I've protected my physical and mental health through consistent
+                                    routines,
                                     hobbies, and boundaries that prevent burnout and maintain long-term productivity.
                                 </p>
                             </div>
@@ -627,7 +619,8 @@
 
                     <div class="prose prose-invert max-w-none">
                         <p class="text-text-secondary mb-6 text-lg">
-                            Looking back on my 10+ year journey since 2012, I realize that the most successful developers I know
+                            Looking back on my 10+ year journey since 2012, I realize that the most successful
+                            developers I know
                             aren't necessarily the ones who knew the most frameworks at any given time.
                             They were the ones who never stopped learning, never became complacent, and
                             never lost curiosity about what might be possible.
@@ -640,7 +633,8 @@
                             of my career, and it has been the foundation of my long-term success.
                         </p>
 
-                        <div class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-8">
+                        <div
+                            class="bg-gradient-to-r from-accent-blue to-accent-cyan bg-opacity-20 border border-accent-blue border-opacity-30 rounded-lg p-6 my-8">
                             <p class="text-text-primary italic text-lg">
                                 "In our field, the only constant is change. The developers who thrive are
                                 those who embrace that change as fuel for growth while maintaining the balance
@@ -651,7 +645,8 @@
                         <p class="text-text-secondary text-lg">
                             Your career in development isn't a destination—it's a journey of continuous discovery.
                             Build a lifestyle that sustains your passion, protects your well-being, and makes every day
-                            of coding a choice you're excited to make. When you do, you'll find that the technologies may change,
+                            of coding a choice you're excited to make. When you do, you'll find that the technologies
+                            may change,
                             but your ability to adapt and grow will remain your greatest competitive advantage.
                         </p>
                     </div>
@@ -663,6 +658,10 @@
     <!-- Footer Component -->
     <site-footer></site-footer>
 
-    <script src="js/components.js"></script>
+    <script type="module">
+        // Import and register all other components
+        import '../js/components.js';
+    </script>
 </body>
+
 </html>
